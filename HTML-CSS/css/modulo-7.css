@@ -1,0 +1,186 @@
+/* importando css tabelas */
+@import 'tabelas.css';
+
+
+/*
+herança
+
+   1. sobreposicao / sobrescreve
+   2. aplica a ultimo estilo definodo
+   3. prioriza estilo especificas(comseletores mais proximo)
+
+
+*/
+html{
+    font-family: sans-serif;
+    color: #808080;
+}
+
+p{
+    color:#020202d0;
+}
+article{
+    color: #555555;
+}
+a {
+    color: #555555; 
+}
+header p {
+    color:#ffff00 ;
+    font-size: 2rem;
+
+    /* color:#ffff00 !important; declarar como importante e vai sobrepor todas as outras */
+}
+
+/*
+combinadores
+  - seletores descedetes(espaço)
+  - combinadores de seletore filhos=(>)
+  - combinadores de elementos irmaos adjacentes / que vem na sequencia=(+)
+  - combinadores de elementos irmaosgeral / apos elementos de referencias
+*/
+
+header h2{
+    font-weight: 100;
+}
+
+/* seletore se aplica nesse caso 
+onde h2 e filho de header
+seletores decedentes=(espaco) */
+
+
+/* seletores filhos=(>) */
+
+header > h2{
+    font-weight: 600;
+}
+/* transformar em maiuscula */
+
+/* irmaos adjacentes=(+) */
+h2 + p {
+    background: #ff0;
+    color:black;
+}
+
+/* transformar em maiuscula */
+
+div ~ p{
+    text-transform: uppercase;
+}
+
+/* irmaos geral vem logo depois=(~) */
+
+h2 ~ h5{
+    font-size: 1.2rem;
+}
+
+/* pseudo-elementos */
+
+a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 2rem;
+    display: block;
+    width: 100%;
+}
+
+/* passar o mouse por cima do link */
+a:hover{
+    color: 009;
+    background: #808080;
+}
+
+/* quando o site for visitado deixar marcado com uma cor */
+
+a:visited {
+    color: #009;
+
+}
+
+/* quando clicar no link iramudar de cor */
+
+a:active{
+    color: #0f0;
+}
+
+h2:hover{
+    color:#888;
+}
+
+/* 
+  tipografia 
+
+*/
+html{
+    font-family: 'Times New Roman';
+}
+h1, h2, h3{
+    font-weight: bolder;
+    font-family: 'DotGothic16', sans-serif;
+}
+p{
+    font-weight: normal;
+    font-size: 1.4rem;
+}
+/* tag para  espaso entre as letras*/
+
+ul{
+    padding-left: .5rem;
+    margin-left: .5rem;
+}
+/* oucupar linha =line-height=*/
+li{
+    letter-spacing: 0.01rem;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+/* resumindo uma tag */
+h3{
+    font: italic bold 1.2rem/2 sans-serif;
+}
+
+/* 
+  cores
+  background:pode ser usar varios valores exadecimal e imagens;
+
+  ex:  background: rgba(255, 255, 255, 0.897);
+  ex:  background: url(../images/matrix.png);
+
+  tag completa
+  background: url("../images/pattern.png") center top  no-repeat #000000;
+*/
+
+body{
+    background: url("../images/pattern.png") center top ;
+}
+
+section{
+    background: rgba(255, 255, 255, 0.753);
+}
+
+p{
+    color: blue;
+} 
+
+header, footer{
+    background-color: #034589;
+}
+
+footer p{
+    color: rgb(255, 255, 255)
+}
+
+.navegacao{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+}
+
+.navegacao li a{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.navegacao li a:hover{
+    background-color: rgba(150, 150, 200, .5);
+    color: #333333;
+}

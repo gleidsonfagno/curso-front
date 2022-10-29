@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/ -->
+<html slick-uniqueid="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="description" content="Test your JavaScript, CSS, HTML or CoffeeScript online with JSFiddle code editor.">
+    <meta name="keywords" content="online javascript editor, testing javascript online, online ide, online code editor, html, css, coffeescript, scss online editor">
+    <meta name="author" content="JSFiddle">
+    <meta name="copyright" content="share alike">
+
+      <meta name="robots" content="index, follow">
+      <meta name="googlebot" content="index, follow">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1a1d21">
+
+    <script src="./gleidson-fagno-ex-js-md-12_files/xml.js.baixados"></script><script src="./gleidson-fagno-ex-js-md-12_files/css.js.baixados"></script><script src="./gleidson-fagno-ex-js-md-12_files/htmlmixed.js.baixados"></script><script src="./gleidson-fagno-ex-js-md-12_files/javascript.js.baixados"></script><script>
+      var EditorConfig = {
+        shell: false,
+        paths: {
+          favorite:         "/_make_favourite/",
+          media:            "/mooshellmedia/",
+          addResource:      "/_add_external_resource/",
+          render:           "",
+          saveSettings:     "/_editor_options/",
+          fork:             "/_fork/",
+          save:             "/_save/",
+          update:           "",
+          loadDependencies: "/_get_dependencies/{lib_id}/",
+          showProfile:      "/_show_profile/"
+        },
+        value: {
+          html: "",
+          js:   "",
+          css:  ""
+        },
+        fiddle: {
+          id:   "",
+          slug: "",
+          boilerplate: false
+        },
+        panels: {
+          html: "html",
+          js:   "javascript",
+          css:  "css"
+        },
+        user: {
+          id:       "3922599",
+          username: "gleidsonfagno"
+        },
+        // showHelloBar: true,
+        showHelloBar: false,
+        currentUser:  true,
+        isAuthor:     false,
+        features: {
+          toggleSidebar: false
+        }
+      }
+
+      // translations
+      const I18n = {
+        editor: {
+          panels: {
+            result: "Result",
+            drag_to_reorder: "Drag tabs to reorder",
+            tidy: "Tidy"
+          },
+          sidebar: {
+            toggle_sidebar: "Toggle sidebar"
+          },
+          groups: {
+            placeholder_value:        "Assign to groups",
+            search_placeholder_value: "Search for groups",
+            no_choices_text:          "No more groups",
+            no_results_text:          "No groups found",
+            item_select_text:         "Press to select",
+            you_have_no_groups:       "You have no groups"
+          }
+        }
+      }
+
+        const EditorUISettings = {"layout":1,"darkTheme":true,"tabSize":2,"matchBrackets":true,"lineNumbers":true,"lineWrapping":true,"keyMap":"default","autoCloseTags":true,"autoCloseBrackets":true,"indentWithTabs":false,"indentUnit":2,"codeLinting":true,"autoRun":false,"autoRunValid":true,"autoSave":true,"clearConsole":false,"fontSize":1,"matchTags":false,"foldGutter":true,"reduceHelloBar":false,"codeHints":false,"editorConsole":true}
+    </script>
+
+    <style id="skeleton-theme-inline">*,body,button,html,input,select,textarea{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}a{color:#39464e;text-decoration:none}a:hover{text-decoration:underline}input,select,textarea{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}select{cursor:pointer}blockquote,body,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}abbr,acronym{border:0}::-webkit-input-placeholder{color:#8d8f91}:-moz-placeholder,::-moz-placeholder{color:#8d8f91}:-ms-input-placeholder{color:#8d8f91}.icon{stroke:inherit}a:active,a:focus,button::-moz-focus-inner,button:focus,input[type=button]::-moz-focus-inner,input[type=file]>input[type=button]::-moz-focus-inner,input[type=reset]::-moz-focus-inner,input[type=submit]::-moz-focus-inner,select::-moz-focus-inner{outline:none!important}select:-moz-focusring{color:transparent;text-shadow:0 0 0 #000}.checkboxCont{cursor:pointer}.checkboxCont .checkbox{position:relative;background:rgba(0,0,0,.1);display:inline-block;vertical-align:middle;border-radius:14px;width:24px;height:14px;margin-right:5px;top:-2px;transition:all .15s}.checkboxCont .checkbox:after{content:"";border-radius:12px;position:absolute;top:1px;left:1px;width:12px;height:12px;background:#fff;display:block;transition:left .15s;box-shadow:0 2px 4px 0 rgba(0,0,0,.2),0 0 1px 0 rgba(0,0,0,.21)}.checkboxCont input[type=checkbox]{display:none}.checkboxCont input[type=checkbox]:checked+.checkbox{background:#2e71ff}.checkboxCont input[type=checkbox]:checked+.checkbox:after{left:11px}.checkboxCont input[type=checkbox]:disabled+.checkbox{background:rgba(0,0,0,.1)}.checkboxCont input[type=checkbox]:disabled+.checkbox:after{opacity:.5}.checkboxCont small{color:rgba(0,0,0,.3);font-size:inherit}.proBadgeSelf{display:none}.proBadge .proBadgeSelf{display:inline-block;background:#f3ca63;color:#1a1d21;padding:0 3px;height:13px;border-radius:2px;line-height:13px;font-size:9px;font-weight:bold;overflow:hidden;position:relative;bottom:-2px;left:3px;text-transform:uppercase}.proBadge .proBadgeSelf:hover{text-decoration:none;background:#f8e2aa}#sidebar .proBadgeSelf{color:#1a1d21}.groupsList{overflow:auto;max-height:150px;margin-top:10px}.groupsList .privateGroup{height:10px;display:inline-block;padding:2px;border-radius:2px;background:inherit;vertical-align:bottom}.groupsList .privateGroup g{stroke:#8d8f91}.groupsList li{margin-bottom:5px}.groupsList li input,.groupsList li span{display:inline-block}.groupsList li span{color:inherit;max-width:140px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;vertical-align:bottom;margin-left:5px}.groupsList label{font-size:13px;cursor:pointer}a{outline:none}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";background:#1f2227;padding:0;margin:0;font-size:14px;color:#39464e}#progressbar{height:3px;position:absolute;top:60px;left:0;right:0;z-index:110;pointer-events:none}header{height:60px;background:#1a1d21;box-shadow:0 0 5px rgba(26,29,33,0);z-index:100;width:100vw}header .title{position:absolute;top:-9000em}header h1{position:absolute;top:14px;left:10px;z-index:800;transition:all .15s}header h1 a{display:block}header h1 svg{transition:all .15s;position:relative;height:33px;width:46px;stroke:#2e71ff}header h1 svg#no-war{stroke:#0057b7}header h1 svg#no-war path:last-child{stroke:gold}#app-updates{float:left;position:relative;width:20px}#app-updates .bodyCont{opacity:1;transition:all .1s;transform:translateY(0);margin-left:10px;overflow:hidden;height:60px;width:300px}#app-updates .body{color:#fbfbfb;transition:all .1s;background:transparent;padding:14px;border-radius:3px;line-height:1.45em;font-size:13px;position:relative;top:6px;width:300px}#app-updates strong{font-weight:700}#app-updates h3{text-overflow:ellipsis;width:100%;white-space:nowrap;overflow:hidden}#app-updates p{margin-top:10px}#app-updates p a{font-weight:700}#app-updates .updateActions,#app-updates p{pointer-events:none;opacity:0}#app-updates .updateActions{margin-top:12px;text-align:right}#app-updates .updateActions a{color:#8d8f91;font-size:12px;padding:3px 6px;border:1px solid transparent;border-radius:4px}#app-updates .updateActions a:hover{border:1px solid hsla(210,2%,56%,.2);text-decoration:none}#app-updates .badge{background:#26aa5a;color:#fff;font-size:11px;padding:3px 6px;border-radius:3px;margin-right:5px;font-weight:400}#app-updates.hidden .bodyCont,#app-updates:hover .bodyCont{overflow:visible}#app-updates.hidden .body,#app-updates:hover .body{background:#fff;color:#39464e;box-shadow:0 0 1px rgba(57,70,78,.15),0 20px 55px -8px rgba(57,70,78,.25)}#app-updates.hidden h3,#app-updates:hover h3{text-overflow:inherit;white-space:normal;overflow:auto;font-weight:700}#app-updates.hidden .updateActions,#app-updates.hidden p,#app-updates:hover .updateActions,#app-updates:hover p{pointer-events:auto;opacity:1}#app-updates.hidden{transform:translateY(20px)}#app-updates-highlighter,#app-updates.hidden,#app-updates.hidden .updateActions,#app-updates.hidden p{pointer-events:none;opacity:0}#app-updates-highlighter{position:absolute;border:3px solid #26aa5a;border-radius:5px;transition:all .1s;transform:scale(1.05);z-index:1000}#app-updates-highlighter.show{opacity:1;transform:scale(1)}#layout-container{position:relative;display:grid;grid-template-columns:210px 1fr;grid-template-areas:"sidebar content"}#show-result{height:100vh}#content{grid-area:content;position:relative}#content #toggle-sidebar{position:absolute;left:-10px;top:calc(100vh - 110px);width:15px;height:40px;background:#1a1d21;border:1px solid #2c2f34;z-index:100;border-radius:2px;display:flex;justify-content:center}#content #toggle-sidebar svg{height:inherit;width:inherit}#content #toggle-sidebar g{stroke:#626468}#content #toggle-sidebar:hover{border:1px solid #2e71ff}#content #toggle-sidebar:hover g{stroke:#e9e9e9}#content #toggle-sidebar:hover:after{content:attr(data-title);display:block;background:#2e71ff;color:#fff;border-radius:3px;padding:4px 8px;position:absolute;top:calc(50% - 11px);left:22px;z-index:20;white-space:nowrap}#sidebar{grid-area:sidebar;padding:0;margin:0;font-size:12px;border-right:1px solid #2c2f34;background:#1f2227;display:flex;flex-direction:column;color:#cfd0d1;box-shadow:0 0 0 rgba(0,0,0,.5);position:relative}#sidebar #s-cont{flex-grow:1;opacity:0;pointer-events:none}#sidebar #profile-segment{padding:20px 10px;border-bottom:1px solid #2c2f34}#sidebar #profile-segment.hidden{display:none}#sidebar .userSidebar .userProfile{display:grid;font-size:14px;grid-template-columns:45px 1fr;grid-column-gap:12px}#sidebar .userSidebar .userProfile .profileDetails{display:flex;flex-direction:column;justify-content:center}#sidebar .userSidebar .userProfile .avatar{position:relative}#sidebar .userSidebar .userProfile a{color:#fbfbfb;display:block;font-weight:700}#sidebar .userSidebar .userProfile img{overflow:hidden;border-radius:4px;box-shadow:0 0 0 1px #1a1d21,0 0 0 3px #e9e9e9;position:relative;top:1px;left:1px}#sidebar .userSidebar .userProfile .company{font-weight:400;margin-top:4px;color:#8d8f91;font-size:12px;margin-bottom:10px}#sidebar .userSidebar .userProfile .socialInfo{display:flex;column-gap:4px}#sidebar .userSidebar .userProfile .socialInfo li:not(.more){display:block}#sidebar .userSidebar .userProfile .socialInfo li:not(.more).hidden{display:none}#sidebar .userSidebar .userProfile .socialInfo:hover li.hidden{display:block}#sidebar .userSidebar .userProfile .socialInfo:hover li.more{display:none}#sidebar .userSidebar .userProfile .socialInfo svg{height:13px;width:17px;opacity:.4}#sidebar .userSidebar .userProfile .socialInfo a{display:block;border-radius:3px}#sidebar .userSidebar .userProfile .socialInfo a:hover svg{opacity:1}#sidebar .userSidebar .userDetails{clear:both;padding-top:6px;color:#fbfbfb}#sidebar .userSidebar .userDetails a{color:#fbfbfb}#sidebar .userSidebar .userDetails li{margin-top:3px}#sidebar .userSidebar.proProfile .userProfile img,#sidebar .userSidebar.teamProfile .userProfile img{box-shadow:0 0 0 1px #1a1d21,0 0 0 3px #f3ca63}#sidebar .userSidebar.proProfile .avatar:after,#sidebar .userSidebar.teamProfile .avatar:after{content:"Supporter";display:inline-block;background:#f3ca63;color:#1a1d21;padding:0 2px;height:13px;border-radius:2px;line-height:13px;font-size:9px;font-weight:bold;overflow:hidden;position:absolute;top:37px;left:-2px;width:47px;pointer-events:none;text-align:center}#sidebar .userSidebar.teamProfile .userProfile img{box-shadow:0 0 0 1px #1a1d21,0 0 0 3px #fa777c}#sidebar .userSidebar.teamProfile .avatar:after{content:"TEAM";background:#fa777c}#sidebar .userSidebar.segment{margin:0 20px}#sidebar .userSidebar.body{position:relative;top:4px}#actions{height:60px;font-size:13px;position:relative;z-index:300;margin-left:70px;opacity:0;pointer-events:none;display:grid;grid-template-columns:auto auto}#actions svg{position:relative;height:16px;left:-1px}#actions svg.rightIcon{margin-right:0;margin-left:6px}#actions .actionCont{display:flex}#actions .right{justify-content:flex-end;padding-right:10px}#actions .actionItem{position:relative;margin-right:1px}#actions .actionItem.visible{display:block}#actions .actionItem.hidden{display:none}#actions .actionItem .aiButton,#actions .actionItem .aiButton span,#actions .dropdown .actionItem a.aiButton{height:60px}#actions .actionItem a.aiButton{display:flex;outline:none;text-decoration:none;padding:0 7px;align-items:center;justify-content:center;color:#fbfbfb;position:relative}#actions .actionItem a.aiButton:after{content:"";display:block;width:100%;background:#2e71ff;height:3px;bottom:-1px;left:0;position:absolute;pointer-events:none;border-radius:3px;opacity:0;transition:all .15s;transform:scale(.95)}#actions .actionItem a.aiButton.selected:after,#actions .actionItem a.aiButton:hover:after{opacity:1;transform:scale(1)}#actions .actionItem a.aiButton.disabled{opacity:.3;pointer-events:none}#actions img{overflow:hidden;border-radius:3px;box-shadow:0 0 0 1px #1a1d21,0 0 0 2px #e9e9e9}#actions img.proProfile{box-shadow:0 0 0 1px #1a1d21,0 0 0 2px #f3ca63}#actions img.teamProfile{box-shadow:0 0 0 1px #1a1d21,0 0 0 2px #fa777c}#actions .actionItem a.aiButton span{font-size:.9em}#actions .noIcon a.aiButton span{padding:0 0 0 6px;margin-right:0}#actions .actionItem #mobile.aiButton span{margin-right:0}#actions .actionItem a.aiButton span.selected{color:#555;background:#fff}#actions .dropdown .dropdownCont li{line-height:26px}.dropdownCont{position:absolute;z-index:9000;opacity:1;transform:translateY(0);transition:opacity .12s,transform .12s;will-change:opacity,transform}.dropdownCont .dcWrapper{background-color:#fff;width:300px;padding:15px;margin:0;font-size:13px;box-shadow:0 0 1px rgba(57,70,78,.15),0 20px 55px -8px rgba(57,70,78,.25);border-radius:5px;max-height:calc(100vh - 100px);overflow:auto}.dropdownCont .dcWrapper.menu{width:200px;padding:12px 0}.dropdownCont .dcWrapper.menu li{line-height:22px;padding:0 15px 6px}.dropdownCont .dcWrapper.menu li a{color:#39464e;position:relative}.dropdownCont .dcWrapper.menu li.other{border-top:1px solid #e9e9e9;padding:6px 15px 0}.dropdownCont .dcWrapper.menu li.other+.other{border-top:none}.dropdownCont .dcWrapper.menu li.other a{color:#8d8f91}.dropdownCont .dcWrapper:before{top:-11px;border-bottom:10px solid rgba(57,70,78,.15)}.dropdownCont .dcWrapper:after,.dropdownCont .dcWrapper:before{display:block;position:absolute;right:20px;vertical-align:middle;content:"";border-left:8px solid transparent;border-right:8px solid transparent;border-style:none double solid;width:0;height:0}.dropdownCont .dcWrapper:after{top:-10px;border-bottom:10px solid #fff}.dropdownCont.center .dcWrapper:after,.dropdownCont.center .dcWrapper:before{left:50%;margin-left:-4px}.dropdownCont.hidden{opacity:0;transform:translateY(10px);pointer-events:none}.twitterCont{padding:10px;display:block;border-top:1px solid #2c2f34}#sidebar #support-jsfiddle{color:#fff;padding:15px;background:#1a1d21;border-top:3px solid #f3ca63;line-height:18px;position:absolute;bottom:-20px;left:0;right:0;opacity:0;pointer-events:none;transition:all .15s}#sidebar #support-jsfiddle p{font-size:13px;line-height:17px;margin:4px 0;color:#cfd0d1}#sidebar #support-jsfiddle h3{font-size:13px}#sidebar #support-jsfiddle a{background:#f3ca63;padding:6px 12px;display:inline-block;color:#1a1d21;font-weight:600;border-radius:3px;margin-top:10px}#sidebar #support-jsfiddle.show{bottom:0;left:0;right:0;opacity:1;pointer-events:auto}#sidebar #carbonads{text-align:center}#sidebar #carbonads .carbon-text{clear:both;display:block;padding:10px 0 0;color:#cfd0d1;font-size:12px;line-height:1.5em}#sidebar #carbonads .carbon-poweredby{display:block;color:#8d8f91;font-size:.9em;padding:10px 0 0}#hello-bar{max-height:0;background:#2e71ff;transition:max-height .15s;overflow:hidden;position:relative;will-change:height;pointer-events:auto;z-index:120}#hello-bar .hbBody{box-sizing:border-box;height:100%;padding:20px 0 20px 150px;color:#fbfbfb;display:grid;grid-template-columns:minmax(200px,1.5fr) minmax(200px,1fr) minmax(200px,1fr);grid-gap:10px}#hello-bar .closeHb{position:absolute;top:65px;left:15px;font-size:13px}#hello-bar .closeHb svg{height:16px;vertical-align:middle}#hello-bar a{color:#fbfbfb}#hello-bar h3{font-weight:600;margin-bottom:15px}#hello-bar li{font-size:13px;line-height:1.42em}#hello-bar .upgradeToPro{display:flex;width:90%;padding:10px 9px;border-radius:5px;transition:all .15s;background:#f3ca63;color:#39464e;box-shadow:0 4px 4px rgba(0,0,0,.1),0 0 1px rgba(0,0,0,.5);margin-top:20px;justify-content:center;align-items:center;flex-direction:column}#hello-bar .upgradeToPro svg{stroke:#39464e;height:20px;margin-right:7px;display:none}#hello-bar .upgradeToPro strong{font-size:13px;font-weight:600;text-align:center}#hello-bar .upgradeToPro em{font-size:11px;display:block;margin-top:6px;color:rgba(57,70,78,.8)}#hello-bar .upgradeToPro:hover{text-decoration:none;transform:translateY(-2px);box-shadow:0 6px 6px -2px rgba(0,0,0,.2),0 0 1px rgba(0,0,0,.5)}#hello-bar .upgradeToPro:hover strong{text-decoration:underline}#hello-bar .articles li{list-style:disc;margin-left:14px}#hello-bar .articles li span{color:hsla(0,0%,100%,.45);font-size:12px;margin-left:4px}#hello-bar .articles li:last-child{margin-top:10px;font-weight:600;list-style:none;margin-left:0}#hello-bar ul.boilerplates li{margin:0 10px 10px 0;display:inline-flex}#hello-bar ul.boilerplates a{display:block;padding:7px 9px;border-radius:4px;transition:all .15s;background:#fff;color:#39464e;box-shadow:0 4px 4px rgba(0,0,0,.1)}#hello-bar ul.boilerplates a:hover{text-decoration:none;transform:translateY(-2px);box-shadow:0 6px 6px -2px rgba(0,0,0,.2)}#hello-bar ul.boilerplates a span{background:#70d18c;color:#fff;font-size:11px;padding:3px 6px;border-radius:3px;margin-left:5px;font-weight:400}#hello-bar .bpAction{display:block;clear:both;padding-top:5px;font-size:13px}#hello-bar .bpAction svg{width:13px;margin-right:2px}#hello-bar .bpAction.hidden{display:none}body.fullyLoaded #actions,body.fullyLoaded #sidebar #s-cont{opacity:1;pointer-events:auto}body.fullyLoaded #loader{display:none}body.fullyLoaded #loader .loader,body.fullyLoaded #loader .shadow{animation:none}body.noSupport #no-support{display:block}body.noSupport #loader{display:none}body.noSupport #loader .loader,body.noSupport #loader .shadow{animation:none}body.hiddenSidebar #layout-container{grid-template-columns:0 1fr}body.hiddenSidebar #sidebar{display:none}body.hiddenSidebar #content #toggle-sidebar{left:0}body.hiddenSidebar #content #toggle-sidebar svg{transform:rotate(180deg)}.windowSettings{pointer-events:none;opacity:0;will-change:opacity,transform}#loader,#no-support{position:absolute;top:calc(50vh - 30px);left:calc(50% - 60px)}#loader .loader,#no-support .loader{width:120px;height:120px;z-index:100;animation:jump .8s ease-in infinite}#loader .loader path,#no-support .loader path{stroke:#fff}#loader .loader .cloud,#no-support .loader .cloud{fill:#2e71ff}#loader .shadow,#no-support .shadow{position:absolute;z-index:-1;top:80px;left:0;display:block;border-radius:100%;height:20px;width:120px;background:#000;opacity:.3;animation:scale-shadow .8s ease-in infinite}@keyframes jump{0%{transform:translateY(0) scale(1.15,.8)}20%{transform:translateY(-35px) scaleY(1.1)}50%{transform:translateY(-50px) scale(1)}80%{transform:translateY(-35px) scale(1)}to{transform:translateY(0) scale(1.15,.8)}}@keyframes scale-shadow{0%{opacity:.3;transform:scale(1)}50%{opacity:.2;transform:scale(.5)}to{opacity:.3;transform:scale(1)}}#no-support{position:absolute;top:calc(50vh - 30px);left:calc(50% - 60px);display:none;color:#fff;text-align:center;font-size:18px}#flash-messages{position:absolute;top:20px;left:0;right:0;z-index:100;display:flex;justify-content:center;opacity:1;transition:all .2s;will-change:opacity,transform}#flash-messages.hidden{pointer-events:none;opacity:0;transform:translateY(-10px) scale(.95)}#flash-messages li{box-shadow:0 10px 10px rgba(0,0,0,.05);padding:0 30px;height:60px;display:flex;color:#cfd0d1;border-radius:100px;font-weight:500;cursor:pointer;align-items:center;background:#2f333b}#flash-messages.draft li{cursor:default}#flash-messages .flashActions{margin-left:10px}#flash-messages .flashActions a{padding:8px 10px;background:#1f2227;border-radius:4px;margin-left:5px;color:#8d8f91;font-size:12px}#flash-messages .flashActions a:hover{color:#fbfbfb}#flash-messages svg{height:30px;margin-right:20px}#flash-messages .success svg{stroke:#70d18c}#flash-messages .error svg{stroke:#ff4d4d}#flash-messages .warning svg{stroke:#f3ca63}</style>
+
+    <!-- <link id="skeleton-theme" rel="stylesheet" type="text/css" href="/css/dist-skeleton-dark.css?9c307ec363c36b1d0dfbf2ee64220cc5ab9c45f2"> -->
+
+    <!-- 
+      <link rel="stylesheet" type="text/css" href="/css/light.css?9c307ec363c36b1d0dfbf2ee64220cc5ab9c45f2">
+     -->
+
+
+    <link rel="icon" href="https://jsfiddle.net/img/favicon.png">
+
+    <title _msthash="149916" _msttexthash="754091">JSFiddle - Playground de Código</title>
+  <script src="./gleidson-fagno-ex-js-md-12_files/_dist-linters.js.baixados" type="text/javascript"></script><script src="./gleidson-fagno-ex-js-md-12_files/_dist-linters.js.baixados" type="text/javascript"></script><script src="./gleidson-fagno-ex-js-md-12_files/_dist-linters.js.baixados" type="text/javascript"></script></head>
+  <body data-skeleton-url="/css/dist-skeleton-dark.css?9c307ec363c36b1d0dfbf2ee64220cc5ab9c45f2" class="gridMode_grid_1 fullyLoaded" cz-shortcut-listen="true">
+    <div id="hello-bar">
+  <a class="closeHb" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><font _mstmutation="1" _msthash="203645" _msttexthash="73632">Fechar </font></a>
+
+  <div class="hbBody">
+    <section>
+      <h3 _msthash="767078" _msttexthash="463658">Comece com uma caldeira:</h3>
+      <ul class="boilerplates">
+        <!-- <li><a href="/">Empty</a></li> -->
+        <li><a href="https://jsfiddle.net/boilerplate/jquery" _msthash="1195766" _msttexthash="80067">jQuery</a></li>
+        <li><a href="https://jsfiddle.net/boilerplate/vue" _msthash="1195948" _msttexthash="31811">Vue</a></li>
+        <li><a href="https://jsfiddle.net/boilerplate/react-jsx" _msthash="1196130" _msttexthash="75504">Reagir</a></li>
+        <li><a href="https://jsfiddle.net/boilerplate/react-jsx" _msthash="1196312" _msttexthash="110253">React + JSX</a></li>
+        <li><a href="https://jsfiddle.net/boilerplate/preact" _msthash="1196494" _msttexthash="77467">Preato</a></li>
+        <li><a href="https://jsfiddle.net/boilerplate/typescript" _msthash="1196676" _msttexthash="107406">Máquina</a></li>
+        <li><a href="https://jsfiddle.net/boilerplate/coffeescript" _msthash="1196858" _msttexthash="201045">CoffeeScript</a></li>
+        <li><a href="https://jsfiddle.net/boilerplate/scss" _msthash="1197040" _msttexthash="35022">SCSS</a></li>
+        <li><a href="https://jsfiddle.net/boilerplate/responsive-css-grid" _msthash="1242059" _msttexthash="96694">Grade CSS</a></li>
+        <li><a href="https://jsfiddle.net/boilerplate/bootstrap" _msthash="1242254" _msttexthash="138918">Bootstrap</a></li>
+        <li><a href="https://jsfiddle.net/boilerplate/postcss" _msthash="1242449" _msttexthash="98891">Postcss</a></li>
+      </ul>
+      <div class="bpAction hidden" _msthidden="1">
+        <svg version="1.1" viewBox="0 0 24 24">
+          <g stroke-linecap="round" stroke-width="1.4" stroke="#fff" fill="none" stroke-linejoin="round">
+            <path d="M17.94,17.94l-4.93766e-08,3.76374e-08c-1.70941,1.303 -3.79089,2.02486 -5.94,2.06c-7,0 -11,-8 -11,-8l-3.63017e-07,6.76516e-07c1.24389,-2.3181 2.96914,-4.34339 5.06,-5.94m3.84,-1.82l-5.75178e-07,1.34634e-07c0.688332,-0.161121 1.39306,-0.241661 2.1,-0.24c7,0 11,8 11,8l4.63472e-07,-8.67058e-07c-0.60702,1.13561 -1.33094,2.20473 -2.16,3.19m-6.72,-1.07l1.53825e-07,-1.65082e-07c-1.12951,1.21217 -3.02783,1.27918 -4.24,0.149667c-1.21217,-1.12951 -1.27918,-3.02783 -0.149667,-4.24c0.0481128,-0.0516337 0.0980326,-0.101554 0.149666,-0.149666"></path>
+            <path d="M1,1l22,22"></path>
+          </g>
+        </svg>
+        <a href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" _msthash="819364" _msttexthash="780169" _msthidden="1">Show boilerplate bar less often?</a>
+      </div>
+    </section>
+
+    <section>
+      <h3 _msthash="767338" _msttexthash="70109">Links:</h3>
+      <ul>
+        <li _msthash="1000012" _msttexthash="25507885">👍🏻 <a href="https://trello.com/b/LakLkQBW/jsfiddle-roadmap" target="_blank" rel="noopener" _istranslated="1">Roteiro</a> (vote em recursos)</li>
+        <li _msthash="1000142" _msttexthash="11261055">🐞 <a href="https://github.com/jsfiddle/jsfiddle-issues/issues" target="_blank" rel="noopener" _istranslated="1">Rastreador de bugs</a></li>
+        <!-- <li>☁️ <a href="https://jsfiddle.net/about" target="_blank" rel="noopener">About</a></li> -->
+        <li _msthash="1000402" _msttexthash="10971818">📙 <a href="https://docs.jsfiddle.net/" target="_blank" rel="noopener">Docs</a></li>
+        <li _msthash="1000532" _msttexthash="11366524">🎛 <a href="http://status.jsfiddle.net/" target="_blank" rel="noopener" _istranslated="1">Status do serviço</a></li>
+      </ul>
+        <a class="upgradeToPro" href="https://jsfiddle.net/extra/" target="_blank">
+          <svg version="1.1" viewBox="0 0 24 24">
+            <path d="M12,2l3.09,6.26l6.91,1.01l-5,4.87l1.18,6.88l-6.18,-3.25l-6.18,3.25l1.18,-6.88l-5,-4.87l6.91,-1.01l3.09,-6.26Z" stroke-linecap="round" stroke-width="1.8" fill="none" stroke-linejoin="round"></path>
+          </svg>
+          <strong _msthash="1154179" _msttexthash="1343862">Suporte o JSFiddle e obtenha recursos extras</strong>
+          <em _msthash="945893" _msttexthash="1869777">Grupos, violinos privados, sem anúncios e muito mais</em>
+        </a>
+    </section>
+
+    <section>
+      <h3 _msthash="767598" _msttexthash="259623">JSFiddle é para:</h3>
+      <ul class="articles">
+        <!-- <li><a href="https://julian.is/article/css-grid-at-scale/?utm_source=jsfiddle&amp;utm_medium=editor" target="_blank">Adopting CSS Grid at scale</a> <span>via julian.is</span></li>
+        <li><a href="https://changelog.com/news/show-mdn-browser-compatibility-data-on-the-command-line-NRR2/?utm_source=jsfiddle&amp;utm_medium=editor" target="_blank">Show MDN browser compatibility data on the command line</a> <span>via changelog.com</span></li>
+        <li>🙋 <a href="https://trello.com/b/VVZC5uQY/jsfiddle-links-inbox" target="_blank">Suggest a link</a></li> -->
+        <li><a href="https://docs.jsfiddle.net/use-cases/demos-for-products-or-libraries" target="_blank" rel="noopener" _msthash="1000467" _msttexthash="711373">Demonstrações para médicos</a></li>
+        <li><a href="https://docs.jsfiddle.net/use-cases/bug-reporting-test-case-for-github-issues" target="_blank" rel="noopener" _msthash="1000597" _msttexthash="2057263">Relatório de bugs (caso de teste) para problemas do Github</a></li>
+        <li><a href="https://docs.jsfiddle.net/use-cases/answers-on-stack-overflow" target="_blank" rel="noopener" _msthash="1000727" _msttexthash="1780259">Apresentando respostas de código no Stack Overflow</a></li>
+        <li><a href="https://docs.jsfiddle.net/use-cases/live-code-collaboration" target="_blank" rel="noopener" _msthash="1000857" _msttexthash="743808">Colaboração em código ao vivo</a></li>
+        <li><a href="https://docs.jsfiddle.net/use-cases/code-snippets-hosting" target="_blank" rel="noopener" _msthash="1000987" _msttexthash="785356">Hospedagem de trechos de código</a></li>
+        <li _msthash="1001117" _msttexthash="75373974">... ou apenas o seu humilde código playground ✌🏻</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+
+    <!-- <h1>Test your JavaScript, CSS, HTML or CoffeeScript online with JSFiddle code editor.</h1> -->
+    <!-- <h2>online javascript editor, testing javascript online, online ide, online code editor, html, css, coffeescript, scss online editor</h2> -->
+    <form method="post" id="show-result" target="result" action="https://fiddle.jshell.net/_display/?editor_console=true" autocomplete="off">
+        <input type="hidden" name="username" value="gleidsonfagno">
+      <input type="hidden" name="authenticity_token" value="GTlY2NqR/LaLNfvBtA8+e+vQw5sb33zpJQt5WO9zpVlW+lWhu5Q5iMmmw0fL45mcXhxEYHFnyXZCoYdD+9z1Fg==">
+
+      <header>
+        <h1>
+          <span class="title" _msthash="888394" _msttexthash="103740">JSFiddle</span>
+          <div class="changelog-badge">
+            <a title="JSFiddle" href="https://jsfiddle.net/">
+              <svg width="46px" height="33px" viewBox="0 0 46 33" id="no-war">
+                <g stroke-width="1.8" fill="none" fill-rule="evenodd">
+                  <path d="M23.4888889,20.543316 C21.4404656,18.4187374 19.0750303,15.6666667 16.4832014,15.6666667 C13.8721947,15.6666667 11.7555556,17.6366138 11.7555556,20.0666667 C11.7555556,22.4967196 13.8721947,24.4666667 16.4832014,24.4666667 C18.8347252,24.4666667 19.9845474,23.0125628 20.6429148,22.312473" id="Oval-1" stroke-linecap="round"></path>
+                  <path d="M22.5111111,19.5900174 C24.5595344,21.7145959 26.9249697,24.4666667 29.5167986,24.4666667 C32.1278053,24.4666667 34.2444444,22.4967196 34.2444444,20.0666667 C34.2444444,17.6366138 32.1278053,15.6666667 29.5167986,15.6666667 C27.1652748,15.6666667 26.0154526,17.1207706 25.3570852,17.8208603" id="Oval-1-Copy" stroke-linecap="round"></path>
+                  <path d="M45,22.7331459 C45,19.1499462 42.7950446,16.079593 39.6628004,14.7835315 C39.6774469,14.5246474 39.7003932,14.2674038 39.7003932,14.0035978 C39.7003932,6.82243304 33.8412885,1 26.611593,1 C21.3985635,1 16.9102123,4.03409627 14.8051788,8.41527616 C13.7828502,7.62878013 12.503719,7.15547161 11.1134367,7.15547161 C7.77825654,7.15547161 5.07450503,9.84159999 5.07450503,13.1544315 C5.07450503,13.7760488 5.16938207,14.3779791 5.3477444,14.9418479 C2.74863428,16.4787471 1,19.2867709 1,22.5105187 C1,27.3287502 4.89630545,31.2367856 9.72803666,31.31094 L36.3341301,31.3109406 C41.1201312,31.3406346 45,27.4870665 45,22.7331459 L45,22.7331459 Z" stroke-linejoin="round"></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </h1>
+          <div id="actions">
+  <nav class="actionCont">
+    <div class="actionItem">
+      <a class="aiButton" id="run" title="Run (Command/Ctrl + Enter)" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#run">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg><font _mstmutation="1" _msthash="35412" _msttexthash="78026"> Correr</font></a>
+    </div>
+
+    <!-- Logged in users don't need the info popup on saving/updating/forking -->
+      <div class="actionItem ">
+        <a class="aiButton" id="save" title="Save (Command/Ctrl + S)" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#save">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-upload-cloud"><polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg><font _mstmutation="1" _msthash="47489" _msttexthash="77272"> Salvar</font></a>
+      </div>
+
+      <div class="actionItem visible" _mstvisible="0">
+        <a class="aiButton" id="fork" title="Fork" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#fork" _mstvisible="1">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shuffle" _mstVisible="2"><polyline points="16 3 21 3 21 8" _mstVisible="3"></polyline><line x1="4" y1="20" x2="21" y2="3" _mstVisible="3"></line><polyline points="21 16 21 21 16 21" _mstVisible="3"></polyline><line x1="15" y1="15" x2="21" y2="21" _mstVisible="3"></line><line x1="4" y1="4" x2="9" y2="9" _mstVisible="3"></line></svg><font _mstmutation="1" _msthash="48074" _msttexthash="59020" _mstvisible="2"> Garfo</font></a>
+      </div>
+
+    <div class="actionItem visible" _mstvisible="0">
+      <a class="aiButton" id="mark_favourite" title="Set as base" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#set-as-base" _mstvisible="1">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag" _mstVisible="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" _mstVisible="3"></path><line x1="7" y1="7" x2="7" y2="7" _mstVisible="3"></line></svg><font _mstmutation="1" _msthash="265278" _msttexthash="313651" _mstvisible="2"> Definido como base</font></a>
+    </div>
+
+    <div class="actionItem ">
+      <a class="aiButton" id="collaborate" title="Collaborate" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#collaborate">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg><font _mstmutation="1" _msthash="181259" _msttexthash="133367"> Colaborar</font></a>
+    </div>
+
+    <div class="actionItem dropdown visible" _mstvisible="0">
+      <a class="aiButton dropdownTrigger" id="share" title="Embed" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#embed" data-popover-trigger="embed" _mstvisible="1">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" _mstVisible="2"><polyline points="16 18 22 12 16 6" _mstVisible="3"></polyline><polyline points="8 6 2 12 8 18" _mstVisible="3"></polyline></svg><font _mstmutation="1" _msthash="61893" _msttexthash="160004" _mstvisible="2"> Incorporar</font></a>
+    </div> <!-- /actionItem -->
+
+    <div id="app-updates" class=""><div class="bodyCont"><div class="body"><font _mstmutation="1" _msthash="515151" _msttexthash="2021058"><strong class="badge" _mstmutation="1" _istranslated="1">Mudar</strong> A listagem do Violino mostra a versão mais recente</font><p _msthash="659815" _msttexthash="29755440">As listas de violinos (Público, Privada, Intitulada, etc) agora exibirão versões mais recentes em vez das salvas como versões base - isso estava causando mais confusão do que bom, então decidimos mudar esse comportamento de longa data.</p><div class="updateActions" _msthash="744185" _msttexthash="794066"><a href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/" class="previous" _istranslated="1">Atualização anterior</a><a href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/" class="dismiss" _istranslated="1">Consegui</a></div></div></div></div>
+
+<script>
+  var updates = [
+    {
+      id: 24,
+      badge: "Change",
+      title: "Fiddle listing shows latest version",
+      body:  "The fiddle listings (Public, Private, Titled, etc) will now display latest versions instead of the ones saved as Base versions - this was causing more confusion than good, so we decided to change this long-standing behavior."
+    },
+    {
+      id: 23,
+      badge: "Update",
+      title: "Evaluate code into the console",
+      body:  "Custom Console beta is getting more stable and feature-rich. Just added the ability to evaluate code in the console.",
+      highlight: {
+        target: "#console"
+      }
+    },
+    {
+      id: 22,
+      badge: "New",
+      title: "Console in the editor",
+      body:  "Introducing the first beta of the editor console - it's going to show you logs, warnings, errors without the need of opening full devtools.<br><br> Console is avaialble for all users during beta, after that it'll be available for JSFiddle supporters.",
+      highlight: {
+        target: "*[data-popover-trigger='editor-settings']"
+      }
+    },
+    {
+      id: 21,
+      badge: "New",
+      title: "More user's social links (Dev.to, SO...)",
+      body:  "You can add more of your social links `Settings / Social Media`, for Dev.to, Stack Overflow and Medium. These will be displayed on the profile section in Editor's sidebar and your public profile.",
+    },
+    {
+      id: 20,
+      badge: "Update",
+      title: "Refactored Unsaved Drafts feature",
+      body:  "Unsaved drafts feature is completely rewritten with 100% fewer bugs and 10x more maintainable codebase – as the author of the previous one, I had hard times figuring out what it does 🥴",
+    }
+  ]
+
+  var UpdatesWidget = function(options){
+    if (updates.length <= 0) return false
+
+    var selectedItem  = 0
+    var currentUpdate = updates[selectedItem]
+    var lastSeenId    = window.localStorage.getItem("last_seen_update")
+    var template      = {}
+
+    var element = {
+      updates:     document.querySelector("#app-updates"),
+      highlighter: document.createElement("div")
+    }
+
+    // generic template for the widget
+    template.title   = "<strong class='badge'>#{badge}</strong> #{title}"
+    template.body    = "<p>#{body}</p>"
+    template.actions = "<div class='updateActions'><a href='' class='previous'>Previous update</a><a href='' class='dismiss'>Got it</a></div>"
+    template.full    = template.title + template.body + template.actions
+    template.body    = "<div class='body'>" + template.full + "</div>"
+    template.update  = "<div class='bodyCont'>" + template.body + "</div>"
+
+    // inject the highlighter
+    element.highlighter.id = "app-updates-highlighter"
+    document.body.appendChild(element.highlighter)
+
+    var dismissUpdate = function(event){
+      event.preventDefault()
+      event.stopPropagation()
+
+      window.localStorage.setItem("last_seen_update", currentUpdate.id)
+      element.updates.classList.add("hidden")
+
+      Track.ui("Update dismissed")
+    }
+
+    var showHighlighter = function(event){
+      event.preventDefault()
+      event.stopPropagation()
+
+      var target  = document.querySelector(currentUpdate.highlight.target)
+      var rect    = target.getBoundingClientRect()
+      var visible = !element.updates.classList.contains("hidden")
+
+      element.highlighter.style.top    = rect.top + "px"
+      element.highlighter.style.left   = rect.left + "px"
+      element.highlighter.style.width  = rect.width + "px"
+      element.highlighter.style.height = rect.height + "px"
+
+      // only highlight before updater is dismissed
+      if (visible){
+        element.highlighter.classList.add("show")
+      }
+    }
+
+    var hideHighlighter = function(event){
+      element.highlighter.classList.remove("show")
+    }
+
+    var setUpdate = function(event){
+
+      if (event){
+        event.preventDefault()
+        event.stopPropagation()
+
+        selectedItem = selectedItem + 1
+
+      } else {
+        selectedItem = 0
+      }
+
+      currentUpdate = updates[selectedItem]
+
+      // update the title
+      var update = template.update
+        .replace("#{badge}", currentUpdate.badge)
+        .replace("#{title}", currentUpdate.title)
+        .replace("#{body}",  currentUpdate.body)
+
+      element.updates.innerHTML = update
+
+      // dismiss update and save ID for future reference
+      var dismiss = document.querySelector(".updateActions .dismiss")
+      dismiss.addEventListener("click", dismissUpdate)
+
+      var previous = document.querySelector(".updateActions .previous")
+      previous.addEventListener("click", setUpdate)
+    }
+
+    setUpdate()
+
+    // manage highlighter
+    if (currentUpdate.highlight){
+      element.updates.addEventListener("mouseover", showHighlighter)
+      element.updates.addEventListener("mouseout", hideHighlighter)
+    }
+
+    // remove hidden class if user hasn't seen the latest update
+    if (parseInt(lastSeenId) !== currentUpdate.id){
+      element.updates.classList.remove("hidden")
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", UpdatesWidget)
+</script>
+
+  </nav>
+
+  <ul class="actionCont dropdown right">
+  <li class="actionItem">
+    <a class="aiButton dropdownTrigger" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" title="Editor settings" data-popover-trigger="editor-settings">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sliders"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg><font _mstmutation="1" _msthash="430105" _msttexthash="288522"> Configurações </font></a>
+  </li> <!-- /actionItem -->
+
+    <li class="actionItem">
+    <a class="aiButton dropdownTrigger" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" data-popover-trigger="usermenu">
+      <img class=" " src="./gleidson-fagno-ex-js-md-12_files/0db62281931d36c4b41f4082133a370a.jpg" height="32" width="32">
+    </a>
+  </li> <!-- /actionItem -->
+
+  <div class="dropdownCont hidden" data-popover-ref="usermenu" data-popover-position="left">
+    <div class="dcWrapper menu">
+      <ul>
+        <li><a href="https://jsfiddle.net/user/fiddles/all/" _msthash="1134575" _msttexthash="213161">Seus violinos</a></li>
+        <li><a href="https://jsfiddle.net/user/groups/" _msthash="1134757" _msttexthash="164931">Seus grupos</a></li>
+        <li class="other"><a id="personal-settings" href="https://jsfiddle.net/user/settings/profile/" _msthash="350051" _msttexthash="288522">Configurações</a></li>
+        <li class="other"><a href="https://jsfiddle.net/user/logout/" _msthash="1135121" _msttexthash="79768">Logout</a></li>
+      </ul>
+    </div> <!-- /dcWrapper -->
+  </div> <!-- /dropdownCont -->
+
+</ul>
+
+<div class="dropdownCont hidden" data-popover-ref="editor-settings" data-popover-position="left">
+  <div class="dcWrapper editorSettings">
+    <div id="editor-options">
+      <h3 _msthash="396305" _msttexthash="265421">Layout do editor</h3>
+      <div id="layout">
+        <!-- HACK: for some reason the first input always gets the value of the last active
+                   grid mode, for that reason a hack is to create an invisible first input -->
+        <input style="display: none;" name="layout" type="radio" value="grid_invisible_hack">
+        <font _mstmutation="1" _msthash="83330" _msttexthash="4257760"><label _mstmutation="1" _istranslated="1"> <input name="layout" type="radio" value="1" checked="" _istranslated="1"> <span class="gridMode grid_1" _istranslated="1"></span> Resultados </label> <label _mstmutation="1" _istranslated="1"> finais das colunas clássicas <input name="layout" type="radio" value="3" _istranslated="1"> <span class="gridMode grid_3" _istranslated="1"></span> </label> <label _mstmutation="1" _istranslated="1"> <input name="layout" type="radio" value="2" _istranslated="1"> <span class="gridMode grid_2" _istranslated="1"></span> </label> <label _mstmutation="1" _istranslated="1"> Guias de resultados <input name="layout" type="radio" value="5" _istranslated="1"> <span class="gridMode grid_5" _istranslated="1"></span> (colunas) </label> <label _mstmutation="1" _istranslated="1"> <input name="layout" type="radio" value="6" _istranslated="1"> <span class="gridMode grid_6" _istranslated="1"></span> Guias (linhas) </label> <label _mstmutation="1" _istranslated="1"> <input name="layout" type="radio" value="4" _istranslated="1"> <span class="gridMode grid_4" _istranslated="1"></span> </label></font>
+      </div>
+
+      <h3 _msthash="396565" _msttexthash="115323">Consolar</h3>
+      <div class="fieldsCont">
+        <p class="proBadge">
+          <label class="checkboxCont ">
+            <input type="checkbox" name="editorConsole">
+            <span class="checkbox"></span><font _mstmutation="1" _msthash="904163" _msttexthash="450359"> Console no editor <small _mstmutation="1" _istranslated="1">(beta)</small></font>
+          </label>
+        </p>
+        <p>
+          <label class="checkboxCont">
+            <input type="checkbox" name="clearConsole">
+            <span class="checkbox"></span><font _mstmutation="1" _msthash="904384" _msttexthash="618124"> Console claro em execução </font></label>
+        </p>
+      </div> <!-- /fieldsCont -->
+
+      <h3 _msthash="396955" _msttexthash="58357">Geral</h3>
+      <div class="fieldsCont">
+        <!-- <p>
+          <label class="checkboxCont">
+            <input type="checkbox" name="darkTheme" checked>
+            <span class="checkbox"></span>
+            Dark theme
+          </label>
+        </p> -->
+        <p>
+          <label class="checkboxCont">
+            <input type="checkbox" name="lineNumbers" checked="">
+            <span class="checkbox"></span><font _mstmutation="1" _msthash="905281" _msttexthash="272246"> Números de linha </font></label>
+        </p>
+        <p>
+          <label class="checkboxCont">
+            <input type="checkbox" name="lineWrapping" checked="">
+            <span class="checkbox"></span><font _mstmutation="1" _msthash="905502" _msttexthash="427752"> Linhas de envoltório </font></label>
+        </p>
+        <p>
+          <label class="checkboxCont">
+            <input type="checkbox" name="indentWithTabs">
+            <span class="checkbox"></span><font _mstmutation="1" _msthash="905723" _msttexthash="378248"> Travessão com guias </font></label>
+        </p>
+        <p>
+          <label class="checkboxCont">
+            <input type="checkbox" name="codeHints">
+            <span class="checkbox"></span><font _mstmutation="1" _msthash="905944" _msttexthash="959686"> Dica de código (autocompletar) <small _mstmutation="1" _istranslated="1">(beta)</small></font>
+          </label>
+        </p>
+      </div> <!-- /fieldsCont -->
+
+      <div class="selectPairs">
+        <div class="selectPair">
+          <span class="label" _msthash="654979" _msttexthash="446719">Tamanho do travessão:</span>
+          <div class="selectCont">
+            <select name="indentUnit">
+              <option value="2" _msthash="1946373" _msttexthash="91572">2 espaços</option>
+              <option value="3" _msthash="1946555" _msttexthash="91663">3 espaços</option>
+              <option value="4" _msthash="1946737" _msttexthash="91754">4 espaços</option>
+            </select>
+          </div>
+        </div> <!-- /selectPair -->
+
+        <div class="selectPair">
+          <span class="label" _msthash="655265" _msttexthash="156754">Mapa-chave:</span>
+          <div class="selectCont">
+            <select name="keyMap">
+              <option value="default" _msthash="1947283" _msttexthash="94419">Inadimplência</option>
+              <option value="sublime" _msthash="1947465" _msttexthash="179894">Texto Sublime</option>
+              <!-- <option value="vim">VIM</option> -->
+              <option value="emacs" _msthash="1947829" _msttexthash="42471">EMACS</option>
+            </select>
+          </div>
+        </div> <!-- /selectPair -->
+
+        <div class="selectPair">
+          <span class="label" _msthash="655551" _msttexthash="273156">Tamanho da fonte:</span>
+          <div class="selectCont">
+            <select name="fontSize">
+              <option value="1" _msthash="1948193" _msttexthash="94419">Inadimplência</option>
+              <option value="2" _msthash="1948375" _msttexthash="28977">Grande</option>
+              <option value="3" _msthash="1948557" _msttexthash="74594">Maior</option>
+              <option value="4" _msthash="1948739" _msttexthash="54899">Jabba</option>
+            </select>
+          </div>
+        </div> <!-- /selectPair -->
+      </div> <!-- /selectPairs -->
+
+      <h3 _msthash="423683" _msttexthash="237003">Comportamento</h3>
+      <div class="fieldsCont">
+        <p>
+            <label class="checkboxCont">
+              <input type="checkbox" name="autoRun">
+              <span class="checkbox"></span><font _mstmutation="1" _msthash="939237" _msttexthash="822679"> Código de execução automática </font></label>
+        </p>
+        <p>
+            <label class="checkboxCont">
+              <input type="checkbox" name="autoRunValid" checked="">
+              <span class="checkbox"></span><font _mstmutation="1" _msthash="939458" _msttexthash="1688323"> Apenas código de execução automática que valida </font></label>
+        </p>
+        <p>
+            <label class="checkboxCont">
+              <input type="checkbox" name="autoSave" checked="">
+              <span class="checkbox"></span><font _mstmutation="1" _msthash="939679" _msttexthash="1672424"> Código de salvamento automático (bate na versão) </font></label>
+        </p>
+        <p>
+          <label class="checkboxCont">
+            <input type="checkbox" name="autoCloseTags" checked="">
+            <span class="checkbox"></span><font _mstmutation="1" _msthash="939900" _msttexthash="924898"> Tags HTML de fechamento automático </font></label>
+        </p>
+        <p>
+          <label class="checkboxCont">
+            <input type="checkbox" name="autoCloseBrackets" checked="">
+            <span class="checkbox"></span><font _mstmutation="1" _msthash="940121" _msttexthash="949572"> Suportes de fechamento automático </font></label>
+        </p>
+        <p>
+          <label class="checkboxCont">
+            <input type="checkbox" name="codeLinting" checked="">
+            <span class="checkbox"></span><font _mstmutation="1" _msthash="940342" _msttexthash="647127"> Validação de código ao vivo </font></label>
+        </p>
+        <p>
+          <label class="checkboxCont">
+            <input type="checkbox" name="matchTags">
+            <span class="checkbox"></span><font _mstmutation="1" _msthash="940563" _msttexthash="1322152"> Marcadores de correspondência de destaque </font></label>
+        </p>
+      </div> <!-- /fieldsCont -->
+
+      <h3 _msthash="424112" _msttexthash="131989">Caldeiras</h3>
+      <div class="fieldsCont">
+        <p>
+          <label class="checkboxCont">
+            <input type="checkbox" name="reduceHelloBar">
+            <span class="checkbox"></span><font _mstmutation="1" _msthash="940173" _msttexthash="1598272"> Mostrar barra de caldeiras com menos frequência </font></label>
+        </p>
+      </div> <!-- /fieldsCont -->
+    </div> <!-- /editor-options -->
+  </div> <!-- /dcWrapper -->
+</div> <!-- /dropdownCont -->
+
+</div>
+
+<div class="dropdownCont center hidden" data-popover-ref="saveInfo">
+  <div class="dcWrapper info">
+    <p><strong _msthash="1091987" _msttexthash="914576">Salvar violino anônimo (público) ?</strong></p>
+    <p _msthash="1092104" _msttexthash="5879731">- Certifique-se de não incluir <strong _istranslated="1">dados</strong><br _istranslated="1"> pessoais- Não inclua <strong _istranslated="1">material protegido por direitos autorais</strong></p>
+    <p class="warning" _msthash="1092221" _msttexthash="1762202"><strong _istranslated="1">Faça login</strong> se quiser <strong _istranslated="1">excluir este violino</strong> no futuro.</p>
+    <button id="save" _msthash="47490" _msttexthash="77272">Salvar</button>
+  </div>
+</div>
+
+<div class="dropdownCont center hidden" data-popover-ref="forkInfo">
+  <div class="dcWrapper info">
+    <p><strong _msthash="1092260" _msttexthash="852865">Garfo anônimo (público) violino?</strong></p>
+    <p _msthash="1092377" _msttexthash="5879731">- Certifique-se de não incluir <strong _istranslated="1">dados</strong><br _istranslated="1"> pessoais- Não inclua <strong _istranslated="1">material protegido por direitos autorais</strong></p>
+    <p class="warning" _msthash="1092494" _msttexthash="1762202"><strong _istranslated="1">Faça login</strong> se quiser <strong _istranslated="1">excluir este violino</strong> no futuro.</p>
+    <button id="fork" _msthash="48075" _msttexthash="59020">Garfo</button>
+  </div>
+</div>
+
+<div class="dropdownCont center hidden" data-popover-ref="embed">
+  <div class="dcWrapper embed">
+
+    <div id="creator">
+      <section>
+        <h3 _msthash="482638" _msttexthash="69017">Guias:</h3>
+        <div class="inlineFields">
+          <label class="inputCont_checkbox checkboxCont">
+            <input type="checkbox" name="tabs" value="js" checked="">
+            <span class="checkbox"><i class="bts bt-check"></i></span><font _mstmutation="1" _msthash="848861" _msttexthash="154895"> JavaScript
+          </font></label>
+          <label class="inputCont_checkbox checkboxCont">
+            <input type="checkbox" name="tabs" value="html" checked="">
+            <span class="checkbox"><i class="bts bt-check"></i></span><font _mstmutation="1" _msthash="849030" _msttexthash="34177"> HTML
+          </font></label>
+          <label class="inputCont_checkbox checkboxCont">
+            <input type="checkbox" name="tabs" value="css" checked="">
+            <span class="checkbox"><i class="bts bt-check"></i></span><font _mstmutation="1" _msthash="849199" _msttexthash="31512"> Css </font></label>
+          <label class="inputCont_checkbox checkboxCont">
+            <input type="checkbox" name="tabs" value="result" checked="">
+            <span class="checkbox"><i class="bts bt-check"></i></span><font _mstmutation="1" _msthash="849368" _msttexthash="136409"> Resultado </font></label>
+        </div> <!-- /inlineFields -->
+      </section>
+
+      <section class="noborder">
+        <h3 _msthash="482898" _msttexthash="87932">Visual:</h3>
+        <div class="inlineFields">
+          <font _mstmutation="1" _msthash="526643" _msttexthash="271453"><label class="inputCont_checkbox checkboxCont" _mstmutation="1" _istranslated="1"> <input type="radio" name="skin" value="light" checked="" _istranslated="1"> <span class="radio" _istranslated="1"></span> Escuridão Clara </label> <label class="inputCont_checkbox checkboxCont" _mstmutation="1" _istranslated="1"> <input type="radio" name="skin" value="dark" _istranslated="1"> <span class="radio" _istranslated="1"></span> </label></font>
+        </div> <!-- /inlineFields -->
+        <label class="inputCont_text">
+          <input type="text" name="accentColor" maxlength="7" placeholder="Cor do sotaque" _mstplaceholder="209573">
+        </label>
+        <label class="inputCont_text">
+          <input type="text" name="fontColor" maxlength="7" placeholder="Cor da fonte" _mstplaceholder="156169">
+        </label>
+        <label class="inputCont_text">
+          <input type="text" name="menuColor" maxlength="7" placeholder="Fundo do menu" _mstplaceholder="182910">
+        </label>
+        <label class="inputCont_text">
+          <input type="text" name="bodyColor" maxlength="7" placeholder="Fundo de código" _mstplaceholder="253877">
+        </label>
+      </section>
+
+      <section class="noborder">
+        <h3 _msthash="483158" _msttexthash="887458"> Incorporar trecho <a href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" class="codeTypeToggle" _istranslated="1">Prefira iframe?</a>: </h3>
+        <div class="embedCodeWrap">
+<textarea class="embedCode" id="share_embedded_dropdown" data-view="embed" data-pattern-value="&lt;script async src=&quot;{embedSrc}&quot;&gt;&lt;/script&gt;">&lt;script async src="{embedSrc}"&gt;&lt;/script&gt;
+</textarea>
+        </div> <!-- /embedCodeWrap -->
+
+        <div class="embedCodeWrap hidden">
+<textarea class="embedCode" data-view="embedded" data-pattern-value="&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; src=&quot;{embedSrc}&quot; allowfullscreen=&quot;allowfullscreen&quot; allowpaymentrequest frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;">&lt;iframe width="100%" height="300" src="{embedSrc}" allowfullscreen allowpaymentrequest frameborder="0"&gt;&lt;/iframe&gt;
+</textarea>
+          <p _msthash="675571" _msttexthash="1503762"><strong _istranslated="1">Não há autorização</strong> para se encaixar no código</p><p _msthash="675572" _msttexthash="931060"><strong _istranslated="1">Renderizar o bloqueio</strong> da página pai</p>
+        </div> <!-- /embedCodeWrap -->
+      </section>
+    </div> <!-- /creator -->
+
+    <div id="preview"><iframe width="100%" height="300" frameborder="0" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation allow-downloads" allow="midi; geolocation; microphone; camera; display-capture; encrypted-media;" referrerpolicy="origin" src="./gleidson-fagno-ex-js-md-12_files/saved_resource.html"></iframe></div> <!-- /preview -->
+  </div> <!-- /dcWrapper -->
+</div> <!-- /dropdownCont -->
+
+        <div id="progressbar" class=" "><div class="pb"></div></div>
+      </header>
+
+        <main id="layout-container">
+          <div id="sidebar">
+            <section id="s-cont">
+              <div id="profile-segment" class="hidden"></div>
+
+              <div class="sidebarItem opened">
+  <h3 class="toggler" title="" _msthash="295191" _msttexthash="233272"> Meta de violino </h3>
+  <div class="body">
+    <p>
+      <input type="text" name="title" maxlength="255" value="" placeholder="Violino sem título" _mstplaceholder="361400">
+    </p>
+    <p>
+      <textarea rows="10" cols="40" name="description" placeholder="Sem descrição" _mstplaceholder="258336"></textarea>
+    </p>
+
+    <p class="privateFiddleCont">
+      <label class="checkboxCont proBadge">
+        <input type="checkbox" name="is_private" value="1" disabled="">
+        <span class="checkbox"></span><font _mstmutation="1" _msthash="741546" _msttexthash="263497"> Violino privado </font><a class="proBadgeSelf" href="https://jsfiddle.net/extra/" target="_blank" _msthash="910039" _msttexthash="61022">Extra</a>
+      </label>
+    </p>
+  </div> <!-- /body -->
+</div> <!-- /sidebarItem -->
+
+              <div class="sidebarItem">
+  <h3 class="toggler proBadge"><font _mstmutation="1" _msthash="295607" _msttexthash="80379"> Grupos </font><a class="proBadgeSelf" href="https://jsfiddle.net/extra/" target="_blank" _msthash="402857" _msttexthash="61022">Extra</a>
+  </h3>
+  <div class="body">
+    <ul class="groupsList toggleGroupPrivacy">
+</ul> <!-- .groupsList -->
+
+
+    <div id="choices-select"><div class="choices" data-type="select-multiple" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select name="ignore_this_select" multiple="" class="choices__input" hidden="" tabindex="-1" data-choice="active"></select><div class="choices__list choices__list--multiple"></div><input type="text" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="falso" _mstaria-label="62829"></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" aria-multiselectable="true" role="listbox"><div id="choices--ignore_this_select-ot-item-choice-1" class="choices__item choices__item--choice choices__item--disabled" role="option" data-choice="" data-id="1" data-value="" data-select-text="Press to select" data-choice-disabled="" aria-disabled="true" _msthash="1540877" _msttexthash="365404">Você não tem grupos</div></div></div></div></div>
+  </div> <!-- /body -->
+</div> <!-- /sidebarItem -->
+
+<script src="./gleidson-fagno-ex-js-md-12_files/Groups.js.baixados"></script>
+
+              <script type="text/javascript">
+  var resources = []
+</script>
+
+<div class="sidebarItem">
+  <h3 class="toggler "><font _mstmutation="1" _msthash="296439" _msttexthash="450697"> CDNJs <strong class="resourcesLabel" _mstmutation="1" _istranslated="1">de URL</strong> <strong class="resourcesLabel" _mstmutation="1" _istranslated="1">de</strong> recursos <em id="resource-counter" class="hidden" _mstmutation="1" _istranslated="1">0</em></font>
+  </h3>
+
+  <div class="body">
+    <ul id="external_resources_list">
+    </ul>
+
+    <div id="external-resources-form">
+      <p>
+        <input id="external_resource" type="text" name="q" value="" placeholder="JavaScript/CSS URL" _mstplaceholder="292422" autocomplete="off">
+        <a id="add_external_resource" class="submit" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" title="Add resource">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+        </a>
+      </p>
+    </div>
+    <input type="hidden" value="" id="external_resources_id" name="add_external_resources">
+
+    <ul class="resourcesInfo">
+      <li _msthash="664989" _msttexthash="461565">Cole uma URL CSS/JS direta</li>
+      <li _msthash="665119" _msttexthash="1427517">Digite um nome de biblioteca para buscar no CDNJS</li>
+    </ul>
+  </div> <!-- /body -->
+</div> <!-- /sidebarItem -->
+
+              <div class="sidebarItem">
+  <h3 class="toggler" _msthash="314574" _msttexthash="252239"> Pedidos de Async </h3>
+  <div class="body">
+    <p><code>/echo</code><font _mstmutation="1" _msthash="471003" _msttexthash="1142167"> simula chamadas async:<br _mstmutation="1" _istranslated="1"> JSON: <br _mstmutation="1" _istranslated="1"> JSONP: <br _mstmutation="1" _istranslated="1"> HTML: <br _mstmutation="1" _istranslated="1"> XML: </font><code>/echo/json/</code><code>//jsfiddle.net/echo/jsonp/</code><code>/echo/html/</code><code>/echo/xml/</code>
+    </p>
+    <p _msthash="471120" _msttexthash="1750957">Consulte <a href="https://jsfiddle.gitbook.io/help/async-requests" target="_new" _istranslated="1">os médicos</a> para obter mais informações.</p>
+  </div> <!-- /body -->
+</div> <!-- /sidebarItem -->
+
+              <div class="sidebarItem">
+  <h3 class="toggler" _msthash="315016" _msttexthash="484588"> Outros (links, licença) </h3>
+  <div class="body">
+    <p class="maintainers" _msthash="471575" _msttexthash="1161147">Created and maintained by <a title="Piotr&#39;s twitter" href="http://twitter.com/zalun" target="_blank" rel="noopener">Piotr</a> and <a title="UX and UI Designer" href="http://twitter.com/oskar" target="_blank" rel="noopener">Oskar</a>.</p>
+    <p _msthash="471692" _msttexthash="544336">Hospedado no <a href="https://m.do.co/c/52e7a0ad196d" target="_blank" rel="noopener" _istranslated="1"><strong _istranslated="1">DigitalOcean</strong></a></p>
+    <p><strong></strong></p>
+    <p _msthash="471926" _msttexthash="22913566">Todo o código pertence ao pôster e nenhuma licença é aplicada. A JSFiddle ou seus autores não são responsáveis ou responsáveis por qualquer perda ou dano de qualquer tipo durante o uso do código fornecido.</p>
+    <p><strong _msthash="472043" _msttexthash="61061">Links</strong></p>
+    <p>
+      <font _mstmutation="1" _msthash="472160" _msttexthash="3682211"><a href="https://github.com/jsfiddle/jsfiddle-issues/issues" target="_blank" rel="noopener" _mstmutation="1" _istranslated="1">Roadmap do rastreador</a><br _mstmutation="1" _istranslated="1"> <a href="https://trello.com/b/LakLkQBW/jsfiddle-roadmap" target="_blank" rel="noopener" _mstmutation="1" _istranslated="1">de</a> bugs (vote em recursos)<br _mstmutation="1" _istranslated="1"> <a href="https://jsfiddle.net/about" target="_blank" rel="noopener" _mstmutation="1" _istranslated="1">Sobre o</a><br _mstmutation="1" _istranslated="1"> <a href="http://status.jsfiddle.net/" target="_blank" rel="noopener" _mstmutation="1" _istranslated="1">status do Serviço</a> <a href="https://docs.jsfiddle.net/" target="_blank" rel="noopener" _mstmutation="1" _istranslated="1">docs</a><br _mstmutation="1" _istranslated="1"></font>
+    </p>
+  </div> <!-- /body -->
+</div> <!-- /sidebarItem -->
+
+<style media="screen">
+  .maintainers {
+    position: absolute;
+    top: -900em;
+    left: -900em;
+  }
+</style>
+
+              
+            </section>
+              <section id="s-bottom">
+                <div class="twitterCont">
+    <!-- <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=jsfiddlenet" id="_carbonads_js"></script> -->
+    <script async="" type="text/javascript" src="./gleidson-fagno-ex-js-md-12_files/carbon.js.baixados" id="_carbonads_js"></script>
+</div>
+
+<div id="support-jsfiddle" class="show">
+  <h3 _msthash="461643" _msttexthash="90780885">Apoie o desenvolvimento do JSFiddle e obtenha recursos ✌🏻 extras</h3>
+  <!-- <p>We'll always be free, but for our loyal users we also have some additional stuff:</p> -->
+  <a href="https://jsfiddle.net/extra/" _msthash="431652" _msttexthash="377793">Torne-se um apoiador</a>
+</div>
+
+              </section>
+          </div> <!-- #sidebar -->
+          <div id="content">
+            <div id="editor">
+        <div class="panel-v left" style="width: calc(50% - 0.5px);">
+          <div class="panel-h panel" style="height: calc(50% - 0.5px);">
+            <textarea id="id_code_html" name="code_html" style="display: none;"></textarea>
+            
+        <div class="windowLabelCont">
+          <a href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" class="windowLabel" data-panel="html" data-popover-trigger="html">
+            <span class="label" _msthash="4500704" _msttexthash="34177">HTML</span>
+            <svg width="8" height="7" viewBox="-0.019531 -52.792969 30.039062 25.195312">
+              <path d="M29.941406 -52.500000C29.785156 -52.656250 29.589844 -52.753906 29.355469 -52.792969L0.644531 -52.792969C0.410156 -52.753906 0.214844 -52.656250 0.058594 -52.500000C-0.019531 -52.265625 0.000000 -52.050781 0.117188 -51.855469L14.472656 -27.890625C14.628906 -27.734375 14.804688 -27.636719 15.000000 -27.597656C15.234375 -27.636719 15.410156 -27.734375 15.527344 -27.890625L29.882812 -51.855469C30.000000 -52.089844 30.019531 -52.304688 29.941406 -52.500000ZM29.941406 -52.500000"></path>
+            </svg>
+          </a>
+          <a href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" class="panelTidy" data-panel="html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-left"><line x1="17" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="17" y1="18" x2="3" y2="18"></line></svg><font _mstmutation="1" _msthash="3833063" _msttexthash="114140"> Arrumado</font></a>
+        </div>
+          <div class="CodeMirror cm-s-default CodeMirror-wrap fontSize_1"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 121.6px; left: 264.484px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 263px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 58px; margin-bottom: -17px; border-right-width: 33px; min-height: 243px; padding-right: 17px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like">x</pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div _msthash="140354" _msttexthash="9451">10</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 206.484px; top: 117.6px; height: 16.7969px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="447550" _msttexthash="4459" style="left: 16px; width: 21px;">1</div><div class="CodeMirror-gutter-elt" style="left: 50px; width: 8px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="660924" _msttexthash="4550" style="left: 16px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">digite 3 numeros para calcular a média:</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="914163" _msttexthash="4641" style="left: 16px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="1207260" _msttexthash="4732" style="left: 16px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"numer"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"a"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="1540215" _msttexthash="4823" style="left: 16px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"numer"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"b"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="1913031" _msttexthash="4914" style="left: 16px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"numer"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"c"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="2325703" _msttexthash="5005" style="left: 16px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;" class="CodeMirror-activeline"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -58px; width: 58px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="447630" _msttexthash="5096" style="left: 16px; width: 21px;">8</div><div class="CodeMirror-gutter-elt" style="left: 50px; width: 8px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">onclick</span>=<span class="cm-string">"obterMedia()"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="140356" _msttexthash="5187" style="left: 16px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">calcular média </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="274032" _msttexthash="9451" style="left: 16px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="274033" _msttexthash="9555" style="left: 16px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="1207271" _msttexthash="9659" style="left: 16px; width: 21px;">12</div><div class="CodeMirror-gutter-elt" style="left: 50px; width: 8px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"resultado"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="1207261" _msttexthash="9763" style="left: 16px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="660925" _msttexthash="9867" style="left: 16px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 33px; width: 1px; border-bottom: 0px solid transparent; top: 243px;"></div><div class="CodeMirror-gutters" style="height: 276px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 34px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div>
+          <div class="gutter gutter-vertical" style="height: 1px;"></div><div class="panel-h panel" style="height: calc(50% - 0.5px);">
+            <textarea id="id_code_js" name="code_js" style="display: none;"></textarea>
+            
+        <div class="windowLabelCont">
+          <a href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" class="windowLabel" data-panel="js" data-popover-trigger="js">
+            <span class="label" _msthash="4501068" _msttexthash="884676">JavaScript + Sem Biblioteca (JS puro)</span>
+            <svg width="8" height="7" viewBox="-0.019531 -52.792969 30.039062 25.195312">
+              <path d="M29.941406 -52.500000C29.785156 -52.656250 29.589844 -52.753906 29.355469 -52.792969L0.644531 -52.792969C0.410156 -52.753906 0.214844 -52.656250 0.058594 -52.500000C-0.019531 -52.265625 0.000000 -52.050781 0.117188 -51.855469L14.472656 -27.890625C14.628906 -27.734375 14.804688 -27.636719 15.000000 -27.597656C15.234375 -27.636719 15.410156 -27.734375 15.527344 -27.890625L29.882812 -51.855469C30.000000 -52.089844 30.019531 -52.304688 29.941406 -52.500000ZM29.941406 -52.500000"></path>
+            </svg>
+          </a>
+          <a href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" class="panelTidy" data-panel="js">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-left"><line x1="17" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="17" y1="18" x2="3" y2="18"></line></svg><font _mstmutation="1" _msthash="3833336" _msttexthash="114140"> Arrumado</font></a>
+        </div>
+          <div class="CodeMirror cm-s-default CodeMirror-wrap fontSize_1"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 37.6px; left: 123.875px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="false"><div class="CodeMirror-sizer" style="margin-left: 58px; margin-bottom: -17px; border-right-width: 33px; min-height: 210px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like">x</pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div _msthash="140371" _msttexthash="9451">10</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 65.875px; top: 33.6px; height: 16.7969px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="660949" _msttexthash="4459" style="left: 16px; width: 21px;">1</div><div class="CodeMirror-gutter-elt" style="left: 50px; width: 8px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">function</span> <span class="cm-def">obterMedia</span>(){</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="660936" _msttexthash="4550" style="left: 16px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;" class="CodeMirror-activeline"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -58px; width: 58px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="660951" _msttexthash="4641" style="left: 16px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">var</span> <span class="cm-def">a</span> <span class="cm-operator">=</span> &nbsp;<span class="cm-variable">parseInt</span>(<span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">"a"</span>).<span class="cm-property">value</span>);</span></pre></div><div style="position: relative;" class=""><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="447642" _msttexthash="4732" style="left: 16px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">var</span> <span class="cm-def">b</span> <span class="cm-operator">=</span> &nbsp;<span class="cm-variable">parseInt</span>(<span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">"b"</span>).<span class="cm-property">value</span>);</span></pre></div><div style="position: relative;" class=""><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="1207275" _msttexthash="4823" style="left: 16px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">var</span> <span class="cm-def">c</span> <span class="cm-operator">=</span> &nbsp;<span class="cm-variable">parseInt</span>(<span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">"c"</span>).<span class="cm-property">value</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="1913036" _msttexthash="4914" style="left: 16px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="2325708" _msttexthash="5005" style="left: 16px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">var</span> <span class="cm-def">media</span> <span class="cm-operator">=</span> (<span class="cm-variable-2">a</span> <span class="cm-operator">+</span> <span class="cm-variable-2">b</span> <span class="cm-operator">+</span> <span class="cm-variable-2">c</span> ) <span class="cm-operator">/</span> <span class="cm-number">3</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="2778233" _msttexthash="5096" style="left: 16px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="274051" _msttexthash="5187" style="left: 16px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">"resultado"</span>).<span class="cm-property">innerHTML</span> <span class="cm-operator">=</span> <span class="cm-string">"resultado:"</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="274052" _msttexthash="9451" style="left: 16px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">+</span> <span class="cm-variable-2">media</span>;</span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="914177" _msttexthash="9555" style="left: 16px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">console</span>.<span class="cm-property">logo</span>(<span class="cm-variable-2">a</span> <span class="cm-operator">+</span> <span class="cm-variable-2">b</span> <span class="cm-operator">+</span> <span class="cm-variable-2">c</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="2778236" _msttexthash="9659" style="left: 16px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 33px; width: 1px; border-bottom: 0px solid transparent; top: 210px;"></div><div class="CodeMirror-gutters" style="height: 243px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 34px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div>
+        </div>
+        <div class="gutter gutter-horizontal" style="width: 1px;"></div><div class="panel-v right" style="width: calc(50% - 0.5px);">
+          <div class="panel-h panel" style="height: calc(50% - 0.5px);">
+            <textarea id="id_code_css" name="code_css" style="display: none;"></textarea>
+            
+        <div class="windowLabelCont">
+          <a href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" class="windowLabel" data-panel="css" data-popover-trigger="css">
+            <span class="label" _msthash="5118113" _msttexthash="31512">Css</span>
+            <svg width="8" height="7" viewBox="-0.019531 -52.792969 30.039062 25.195312">
+              <path d="M29.941406 -52.500000C29.785156 -52.656250 29.589844 -52.753906 29.355469 -52.792969L0.644531 -52.792969C0.410156 -52.753906 0.214844 -52.656250 0.058594 -52.500000C-0.019531 -52.265625 0.000000 -52.050781 0.117188 -51.855469L14.472656 -27.890625C14.628906 -27.734375 14.804688 -27.636719 15.000000 -27.597656C15.234375 -27.636719 15.410156 -27.734375 15.527344 -27.890625L29.882812 -51.855469C30.000000 -52.089844 30.019531 -52.304688 29.941406 -52.500000ZM29.941406 -52.500000"></path>
+            </svg>
+          </a>
+          <a href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" class="panelTidy" data-panel="css">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-left"><line x1="17" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="17" y1="18" x2="3" y2="18"></line></svg><font _mstmutation="1" _msthash="4403971" _msttexthash="114140"> Arrumado</font></a>
+        </div>
+          <div class="CodeMirror cm-s-default CodeMirror-wrap fontSize_1"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 62px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 58px; margin-bottom: -17px; border-right-width: 33px; min-height: 25px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div _msthash="14349142" _msttexthash="4459">1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 16.7969px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -58px; width: 58px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -58px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" _msthash="274015" _msttexthash="4459" style="left: 16px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 33px; width: 1px; border-bottom: 0px solid transparent; top: 25px;"></div><div class="CodeMirror-gutters" style="height: 58px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 34px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div>
+          <div class="gutter gutter-vertical" style="height: 1px;"></div><div class="panel-h panel resultsPanel" style="height: calc(50% - 0.5px);">
+            
+        <div class="resultsCont minimized consoleEnabled">
+          <div class="iframeCont">
+            <iframe name="result" allow="midi; geolocation; microphone; camera; display-capture; encrypted-media; clipboard-read; clipboard-write; notifications; payment-handler; persistent-storage; background-sync; ambient-light-sensor; accessibility-events;" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation allow-downloads" allowfullscreen="" allowpaymentrequest="" frameborder="0" src="./gleidson-fagno-ex-js-md-12_files/saved_resource(1).html">
+            </iframe>
+          </div>
+          
+        <div class="windowLabelCont">
+          <span class="windowLabel hidden" _msthash="5342974" _msttexthash="136409"> Resultado </span>
+          <em class="size hidden" _msthash="5123261" _msttexthash="48815">578px</em>
+        </div>
+        <div id="console" _msthidden="1"><section class="header">
+      <svg class="logo" height="16" version="1.1" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.8" fill="none" stroke-linejoin="round"><polyline points="4,17 10,11 4,5"></polyline><line x1="12" x2="20" y1="19" y2="19"></line></g></svg>
+      <h3 _msthash="482794" _msttexthash="201110">Console (beta)</h3>
+      <div class="consoleActions" _msthidden="2">
+        <a id="console-clear" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" _msthash="221299" _msttexthash="205296" _msthidden="1">Clear console</a>
+        <a id="console-minimize" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" _msthash="314743" _msttexthash="115414" _msthidden="1">Minimize</a>
+      </div>
+    <div id="console-summary">
+    <span class="log ">
+      <svg height="12" version="1.1" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.8" fill="none" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></g></svg><font _mstmutation="1" _msthash="696232" _msttexthash="4368">0
+    </font></span>
+    <span class="info ">
+      <svg height="12" version="1.1" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="2" fill="none" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></g></svg><font _mstmutation="1" _msthash="1011027" _msttexthash="4368">0
+    </font></span>
+    <span class="warn ">
+      <svg height="12" version="1.1" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="2" fill="none" stroke-linejoin="round"><path d="M10.29 3.86l-8.47 14.14 -7.80912e-08 1.35236e-07c-.552351.956547-.224686 2.17975.73186 2.7321 .297614.171855.634491.264121.97814.267898h16.94l-1.12917e-07 1.24109e-09c1.1045-.0121397 1.99004-.917357 1.9779-2.02186 -.00377709-.343648-.0960428-.680526-.267898-.97814l-8.47-14.14 1.92952e-08 3.18097e-08c-.572861-.944407-1.80285-1.2456-2.74726-.672744 -.275097.166869-.505875.397647-.672744.672744Z"></path><line x1="12" x2="12" y1="9" y2="13"></line><line x1="12" x2="12.01" y1="17" y2="17"></line></g></svg><font _mstmutation="1" _msthash="1382424" _msttexthash="4368">0
+    </font></span>
+    <span class="error active">
+      <svg height="12" version="1.1" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="2" fill="none" stroke-linejoin="round"><polygon points="7.86,2 16.14,2 22,7.86 22,16.14 16.14,22 7.86,22 2,16.14 2,7.86 7.86,2"></polygon><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></g></svg><font _mstmutation="1" _msthash="1810423" _msttexthash="4914">6
+    </font></span>
+    </div></section><ul id="console-output"><li class="system" _msthash="405860" _msttexthash="3209947">Console JSFiddle (beta). Ativar/desligar nas configurações do Editor.</li><li class="system" _msthash="438009" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438010" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438011" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438012" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438013" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438014" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438015" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="error" _msthash="438016" _msttexthash="4833738">"&lt;a class='gotoLine' href='#57:8'&gt;57:8&lt;/a&gt; Uncaught SyntaxError: Fim inesperado da entrada"</li><li class="system" _msthash="438017" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438018" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438019" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="error" _msthash="438020" _msttexthash="4258280">"&lt;a class='gotoLine' href='#61:1'&gt;61:1&lt;/a&gt; Uncaught SyntaxError: Token inesperado '}'"</li><li class="system" _msthash="438021" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438022" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438023" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438024" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="error" _msthash="438025" _msttexthash="4260204">"&lt;a class='gotoLine' href='#63:1'&gt;63:1&lt;/a&gt; Uncaught SyntaxError: Token inesperado '}'"</li><li class="system" _msthash="438026" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438027" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438028" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438029" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="error" _msthash="438030" _msttexthash="5523284">"&lt;a class='gotoLine' href='#64:9'&gt;64:9&lt;/a&gt; Uncaught TypeError: console.logo não é uma função"</li><li class="system" _msthash="438031" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438032" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438033" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438034" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="error" _msthash="438035" _msttexthash="5523284">"&lt;a class='gotoLine' href='#64:9'&gt;64:9&lt;/a&gt; Uncaught TypeError: console.logo não é uma função"</li><li class="error" _msthash="438036" _msttexthash="5523284">"&lt;a class='gotoLine' href='#64:9'&gt;64:9&lt;/a&gt; Uncaught TypeError: console.logo não é uma função"</li><li class="system" _msthash="438037" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438038" _msttexthash="8168927">☁️ "Violino em execução"</li><li class="system" _msthash="438039" _msttexthash="8168927">☁️ "Violino em execução"</li></ul><input id="console-input" type="text" placeholder="&gt;_" _msthidden="A" _msthiddenattr="131613" _mstplaceholder="48997"></div></div>
+          </div>
+        </div></div>
+
+<div class="windowSettings html hidden" data-panel="html" data-popover-ref="html">
+  <h3 _msthash="343798" _msttexthash="74477">Idioma</h3>
+<div class="selectCont">
+  <select name="panel_html" class="panelChoice" id="panel_html_choice" data-panel_id="id_code_html" data-panel="html">
+      <option data-mime-type="text/html" value="0" selected="" _msthash="669448" _msttexthash="34177">HTML</option>
+      <option data-mime-type="text/x-haml" value="1" _msthash="669630" _msttexthash="32201">HAML</option>
+  </select>
+  <label>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+  </label>
+</div> <!-- /selectCont -->
+
+<h3 _msthash="344188" _msttexthash="96239">Doctype</h3>
+<div class="selectCont">
+  <select name="doctype">
+      <option id="dtd_XHTML 1.0 Strict" value="1" _msthash="321256" _msttexthash="215046">XHTML 1.0 Estrita</option>
+      <option id="dtd_XHTML 1.0 Transitional" value="2" _msthash="550004" _msttexthash="410566">XHTML 1.0 Transição</option>
+      <option selected="" id="dtd_HTML 5" value="3" _msthash="105794" _msttexthash="41756">HTML 5</option>
+      <option id="dtd_HTML 4.01 Strict" value="4" _msthash="314847" _msttexthash="210509">HTML 4.01 Estrita</option>
+      <option id="dtd_HTML 4.01 Transitional" value="5" _msthash="543595" _msttexthash="406029">HTML 4.01 Transitório</option>
+      <option id="dtd_HTML 4.01 Frameset" value="6" _msthash="379938" _msttexthash="265720">Conjunto de quadros HTML 4.01</option>
+  </select>
+  <label>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+  </label>
+</div>
+
+<h3 _msthash="344448" _msttexthash="293085">Etiqueta do corpo</h3>
+<p>
+  <label>
+    <input id="id_body_tag" type="text" name="body_tag" maxlength="255" value="">
+  </label>
+</p>
+
+</div> <!-- /windowSettings -->
+
+<div class="windowSettings js hidden" data-panel="js" data-popover-ref="js">
+  <h3 _msthash="344214" _msttexthash="74477">Idioma</h3>
+<div class="selectCont">
+  <select name="panel_js" class="panelChoice" id="panel_js_choice" data-panel_id="id_code_js" data-panel="js">
+      <option data-mime-type="text/javascript" value="0" selected="" _msthash="582049" _msttexthash="154895">JavaScript</option>
+      <option data-mime-type="text/coffeescript" value="1" _msthash="582231" _msttexthash="201045">CoffeeScript</option>
+      <option data-mime-type="application/javascript" value="2" _msthash="582413" _msttexthash="190073">JavaScript 1.7</option>
+      <option data-mime-type="text/jsx" value="3" _msthash="582595" _msttexthash="107614">Babel + JSX</option>
+      <option data-mime-type="text/typescript" value="4" _msthash="582777" _msttexthash="158119">Máquina</option>
+      <option data-mime-type="text/coffeescript" value="5" _msthash="582959" _msttexthash="213395">CoffeeScript 2</option>
+      <option data-mime-type="text/javascript" value="6" _msthash="583141" _msttexthash="31811">Vue</option>
+      <option data-mime-type="text/jsx" value="7" _msthash="583323" _msttexthash="58773">Reagir</option>
+      <option data-mime-type="text/jsx" value="8" _msthash="583505" _msttexthash="75816">Preato</option>
+  </select>
+  <label>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+  </label>
+</div> <!-- /selectCont -->
+
+<h3 _msthash="344604" _msttexthash="486941">Frameworks &amp; Extensões</h3>
+<div class="panelExtrasChoice">
+  <div class="selectCont">
+    <select name="js_lib" id="js_lib">
+        <optgroup label="Alpino.js" _mstlabel="126438">
+          <option value="409" _msthash="646529" _msttexthash="181272">Alpino.js 2.1.2</option>
+        </optgroup><optgroup label="AngularJS" _mstlabel="124111">
+          <option value="137" _msthash="646530" _msttexthash="180037">AngularJS 1.1.1</option>
+          <option value="180" _msthash="646711" _msttexthash="180271">AngularJS 1.2.1</option>
+          <option value="283" _msthash="646893" _msttexthash="182559">AngularJS 1.4.8</option>
+          <option value="281" _msthash="647075" _msttexthash="409409">AngularJS 2.0.0-alfa.47</option>
+        </optgroup><optgroup label="Bonsai" _mstlabel="75621">
+          <option value="120" _msthash="646531" _msttexthash="122642">Bonsai 0.4.1</option>
+        </optgroup><optgroup label="Tijolo" _mstlabel="78156">
+          <option value="176" _msthash="646532" _msttexthash="129415">Borda de tijolo</option>
+        </optgroup><optgroup label="CriarJs" _mstlabel="90129">
+          <option value="170" _msthash="646533" _msttexthash="228878">CriaJs 2013.09.25</option>
+          <option value="279" _msthash="646712" _msttexthash="227006">CriaJs 2015.05.21</option>
+        </optgroup><optgroup label="D3" _mstlabel="11492">
+          <option value="134" _msthash="646534" _msttexthash="40599">D3 3.x</option>
+          <option value="386" _msthash="646713" _msttexthash="55029">D3 4.13.0</option>
+          <option value="397" _msthash="646894" _msttexthash="47450">D3 5.9.2</option>
+        </optgroup><optgroup label="Dojo" _mstlabel="44564">
+          <option value="87" _msthash="646535" _msttexthash="210652">Dojo (noturno)</option>
+          <option value="372" _msthash="646714" _msttexthash="86827">Dojo 1.4.8</option>
+          <option value="370" _msthash="646895" _msttexthash="86606">Dojo 1.5.6</option>
+          <option value="368" _msthash="647076" _msttexthash="86580">Dojo 1.6.5</option>
+          <option value="366" _msthash="647257" _msttexthash="96369">Dojo 1.7.12</option>
+          <option value="364" _msthash="647439" _msttexthash="96954">Dojo 1.8.14</option>
+          <option value="362" _msthash="647621" _msttexthash="96499">Dojo 1.9.11</option>
+          <option value="360" _msthash="647803" _msttexthash="96382">Dojo 1.10.8</option>
+          <option value="358" _msthash="647985" _msttexthash="95732">Dojo 1.11.4</option>
+          <option value="356" _msthash="679380" _msttexthash="95498">Dojo 1.12.2</option>
+        </optgroup><optgroup label="Brasa" _mstlabel="58032">
+          <option value="190" _msthash="646536" _msttexthash="206973">Brasa (mais recente)</option>
+        </optgroup><optgroup label="Enyo" _mstlabel="46306">
+          <option value="115" _msthash="646537" _msttexthash="212394">Enyo (noturno)</option>
+          <option value="116" _msthash="646715" _msttexthash="86671">Enyo 2.0.1</option>
+          <option value="121" _msthash="646896" _msttexthash="68913">Enyo 2.1</option>
+          <option value="145" _msthash="647077" _msttexthash="86814">Enyo 2.2.0</option>
+          <option value="214" _msthash="647258" _msttexthash="87152">Enyo 2.4.0</option>
+          <option value="238" _msthash="647440" _msttexthash="87516">Enyo 2.5.1</option>
+          <option value="299" _msthash="647622" _msttexthash="87659">Enyo 2.7.0</option>
+        </optgroup><optgroup label="ExtJS" _mstlabel="53820">
+          <option value="23" _msthash="646538" _msttexthash="97422">ExtJS 3.1.0</option>
+          <option value="109" _msthash="646716" _msttexthash="97968">ExtJS 3.4.0</option>
+          <option value="107" _msthash="646897" _msttexthash="97578">ExtJS 4.1.0</option>
+          <option value="80" _msthash="647078" _msttexthash="97786">ExtJS 4.1.1</option>
+          <option value="147" _msthash="647259" _msttexthash="97760">RamjS 4.2.0</option>
+          <option value="258" _msthash="647441" _msttexthash="97552">Ramtra 5.0.0 ExtJS</option>
+          <option value="256" _msthash="647623" _msttexthash="97734">Ramtra 5.1.0 ExtJS</option>
+          <option value="338" _msthash="647804" _msttexthash="98072">RamjS 6.2.0</option>
+        </optgroup><optgroup label="FabricJS" _mstlabel="100815">
+          <option value="250" _msthash="646539" _msttexthash="154271">FabricJS 1.5.0</option>
+          <option value="342" _msthash="646717" _msttexthash="156442">FabricJS 1.7.7</option>
+          <option value="378" _msthash="646898" _msttexthash="168740">FabricJS 1.7.15</option>
+          <option value="380" _msthash="647079" _msttexthash="167687">FabricJS 1.7.20</option>
+        </optgroup><optgroup label="Brilhar" _mstlabel="93457">
+        </optgroup><optgroup label="Inferno" _mstlabel="95368">
+          <option value="336" _msthash="646540" _msttexthash="288769">Inferno 1.0.0-beta9</option>
+        </optgroup><optgroup label="JSBlocks" _mstlabel="107458">
+          <option value="252" _msthash="646541" _msttexthash="218075">JSBlocks (borda)</option>
+        </optgroup><optgroup label="CinéticaJS" _mstlabel="159224">
+          <option value="124" _msthash="646542" _msttexthash="180453">KineticJS 4.0.5</option>
+          <option value="139" _msthash="646718" _msttexthash="180115">KineticJS 4.3.1</option>
+        </optgroup><optgroup label="Nocaute.js" _mstlabel="147693">
+          <option value="104" _msthash="646543" _msttexthash="235885">Nocaute.js 2.0.0</option>
+          <option value="117" _msthash="646719" _msttexthash="236145">Nocaute.js 2.1.0</option>
+          <option value="122" _msthash="646899" _msttexthash="236691">Nocaute.js 2.2.1</option>
+          <option value="163" _msthash="647080" _msttexthash="236665">Nocaute.js 2.3.0</option>
+          <option value="172" _msthash="647260" _msttexthash="236119">Nocaute.js 3.0.0</option>
+          <option value="388" _msthash="647442" _msttexthash="237731">Nocaute.js 3.4.2</option>
+        </optgroup><optgroup label="Lo-Dash" _mstlabel="81952">
+          <option value="167" _msthash="646544" _msttexthash="132054">Lo-Dash 2.2.1</option>
+        </optgroup><optgroup label="Minified" _mstlabel="110682">
+          <option value="164" _msthash="646545" _msttexthash="258947">1.0 beta1 minificado</option>
+        </optgroup><optgroup label="MithriljS" _mstlabel="131430">
+          <option value="273" _msthash="646546" _msttexthash="181298">Mithriljs 0.2.0</option>
+          <option value="390" _msthash="646720" _msttexthash="182832">Mithriljs 1.1.6</option>
+        </optgroup><optgroup label="Mootools" _mstlabel="118989">
+          <option value="59" _msthash="646547" _msttexthash="329173">Mootools (noturno)</option>
+          <option value="62" _msthash="646721" _msttexthash="172497">Mootools 1.3.2</option>
+          <option value="63" _msthash="646900" _msttexthash="394329">Mootools 1.3.2 (compat)</option>
+          <option value="95" _msthash="647081" _msttexthash="173459">Mootools 1.4.5</option>
+          <option value="96" _msthash="647261" _msttexthash="395291">Mootools 1.4.5 (compat)</option>
+          <option value="216" _msthash="647443" _msttexthash="172692">Mootools 1.5.1</option>
+          <option value="263" _msthash="647624" _msttexthash="172939">Mootools 1.5.2</option>
+          <option value="329" _msthash="647805" _msttexthash="394771">Mootools 1.5.2 (compat)</option>
+          <option value="325" _msthash="647986" _msttexthash="172666">Mootools 1.6.0</option>
+          <option value="327" _msthash="679381" _msttexthash="394498">Mootools 1.6.0 (compat)</option>
+        </optgroup><optgroup label="Sem Biblioteca" _mstlabel="222274">
+          <option value="11" selected="" _msthash="646548" _msttexthash="328341">No-Library (JS puro)</option>
+        </optgroup><optgroup label="OpenUI5" _mstlabel="77454">
+          <option value="271" _msthash="646549" _msttexthash="461760">OpenUI5 (mais recente, móvel)</option>
+        </optgroup><optgroup label="Papel.js" _mstlabel="105066">
+          <option value="158" _msthash="646550" _msttexthash="147602">Papel.js 0,22</option>
+        </optgroup><optgroup label="Pixi" _mstlabel="45890">
+          <option value="315" _msthash="646551" _msttexthash="96590">Pixi 3.0.11</option>
+          <option value="331" _msthash="646722" _msttexthash="86346">Pixi 4.0.0</option>
+        </optgroup><optgroup label="Processamento.js" _mstlabel="309387">
+          <option value="67" _msthash="646552" _msttexthash="291434">Processamento.js 1.2.3</option>
+          <option value="81" _msthash="646723" _msttexthash="292656">Processamento.js 1.3.6</option>
+          <option value="135" _msthash="646901" _msttexthash="291382">Processamento.js 1.4.1</option>
+          <option value="206" _msthash="647082" _msttexthash="293254">Processamento.js 1.4.7</option>
+        </optgroup><optgroup label="Protótipo" _mstlabel="159822">
+          <option value="4" _msthash="646553" _msttexthash="225082">Protótipo 1.6.1.0</option>
+          <option value="265" _msthash="646724" _msttexthash="199550">Protótipo 1.7.3</option>
+        </optgroup><optgroup label="RactiveJS" _mstlabel="124358">
+          <option value="287" _msthash="646554" _msttexthash="182000">RactiveJS 0.7.3</option>
+        </optgroup><optgroup label="Raphael" _mstlabel="92053">
+          <option value="30" _msthash="646555" _msttexthash="120757">Rafael 1.4</option>
+          <option value="36" _msthash="646725" _msttexthash="142831">Rafael 1.5.2</option>
+          <option value="76" _msthash="646902" _msttexthash="141713">Rafael 2.1.0</option>
+        </optgroup><optgroup label="Reagir" _mstlabel="75504">
+          <option value="159" _msthash="646556" _msttexthash="102687">Reaja 0.3.2</option>
+          <option value="166" _msthash="646726" _msttexthash="102453">Reaja 0.4.0</option>
+          <option value="184" _msthash="646903" _msttexthash="103181">Reaja 0.8.0</option>
+          <option value="192" _msthash="647083" _msttexthash="103363">Reaja 0.9.0</option>
+          <option value="285" _msthash="647262" _msttexthash="113932">Reaja 0.14.3</option>
+        </optgroup><optgroup label="Rightjs" _mstlabel="96512">
+          <option value="45" _msthash="646557" _msttexthash="136006">Rightjs 2.1.1</option>
+          <option value="136" _msthash="646727" _msttexthash="136422">Rightjs 2.3.1</option>
+        </optgroup><optgroup label="Tumulto" _mstlabel="100074">
+          <option value="382" _msthash="646558" _msttexthash="88725">Motim 3.7.4</option>
+        </optgroup><optgroup label="Estaleiro" _mstlabel="135759">
+          <option value="99" _msthash="646559" _msttexthash="325299">Estaleiro (noturno)</option>
+          <option value="105" _msthash="646728" _msttexthash="145093">Estaleiro 0.2</option>
+        </optgroup><optgroup label="Tórax" _mstlabel="76024">
+          <option value="143" _msthash="646560" _msttexthash="189605">Thorax 2.0.0rc3</option>
+          <option value="174" _msthash="646729" _msttexthash="190385">Thorax 2.0.0rc6</option>
+        </optgroup><optgroup label="Três.js" _mstlabel="104377">
+          <option value="82" _msthash="646561" _msttexthash="150137">R54 .js três</option>
+          <option value="399" _msthash="646730" _msttexthash="136643">Três.js 105</option>
+        </optgroup><optgroup label="Enfatizar" _mstlabel="135733">
+          <option value="111" _msthash="646562" _msttexthash="218491">Sublinhar 1.3.3</option>
+          <option value="133" _msthash="646731" _msttexthash="218738">Sublinhar 1.4.3</option>
+          <option value="160" _msthash="646904" _msttexthash="219011">Sublinhar 1.4.4</option>
+          <option value="267" _msthash="647084" _msttexthash="219726">Sublinhar 1.8.3</option>
+        </optgroup><optgroup label="Vue" _mstlabel="31811">
+          <option value="236" _msthash="646563" _msttexthash="110838">Vue (borda)</option>
+          <option value="289" _msthash="646732" _msttexthash="78689">Vue 1.0.12</option>
+          <option value="344" _msthash="646905" _msttexthash="69381">Vue 2.2.1</option>
+        </optgroup><optgroup label="Instalação do WebApp" _mstlabel="412724">
+          <option value="142" _msthash="646564" _msttexthash="263172">Instalação do WebApp 0.1</option>
+        </optgroup><optgroup label="XTK" _mstlabel="25519">
+          <option value="106" _msthash="646565" _msttexthash="86086">Borda XTK</option>
+        </optgroup><optgroup label="RIO I." _mstlabel="40365">
+          <option value="9" _msthash="646566" _msttexthash="96850">YUI 2.8.0r4</option>
+          <option value="102" _msthash="646733" _msttexthash="63466">YUI 3.5.0</option>
+          <option value="118" _msthash="646906" _msttexthash="63622">YUI 3.6.0</option>
+          <option value="123" _msthash="647085" _msttexthash="64324">YUI 3.7.3</option>
+          <option value="130" _msthash="647263" _msttexthash="63934">YUI 3.8.0</option>
+          <option value="153" _msthash="647444" _msttexthash="72371">YUI 3.10.1</option>
+          <option value="182" _msthash="647625" _msttexthash="72852">YUI 3.14.0</option>
+          <option value="204" _msthash="647806" _msttexthash="73190">YUI 3.16.0</option>
+          <option value="230" _msthash="647987" _msttexthash="73749">YUI 3.17.2</option>
+        </optgroup><optgroup label="Zepto" _mstlabel="62751">
+          <option value="90" _msthash="646567" _msttexthash="140556">Zepto 1.0rc1</option>
+        </optgroup><optgroup label="jQuery" _mstlabel="80067">
+          <option value="46" _msthash="646568" _msttexthash="178048">jQuery (borda)</option>
+          <option value="131" _msthash="646734" _msttexthash="128232">jQuery 1.9.1</option>
+          <option value="248" _msthash="646907" _msttexthash="127283">jQuery 2.1.3</option>
+          <option value="319" _msthash="647086" _msttexthash="127699">jQuery 2.2.4</option>
+          <option value="376" _msthash="647264" _msttexthash="127205">jQuery 3.2.1</option>
+          <option value="384" _msthash="647445" _msttexthash="127400">jQuery 3.3.1</option>
+          <option value="401" _msthash="647626" _msttexthash="127595">jQuery 3.4.1</option>
+        </optgroup><optgroup label="jQuery Slim" _mstlabel="156897">
+          <option value="407" _msthash="646569" _msttexthash="216619">jQuery Slim 3.2.1</option>
+          <option value="405" _msthash="646735" _msttexthash="216866">jQuery Slim 3.3.1</option>
+          <option value="403" _msthash="646908" _msttexthash="217113">jQuery Slim 3.4.1</option>
+        </optgroup><optgroup label="jTypes" _mstlabel="79482">
+          <option value="165" _msthash="646570" _msttexthash="126035">jTypes 2.1.0</option>
+        </optgroup><optgroup label="qooxdoo" _mstlabel="100789">
+          <option value="127" _msthash="646571" _msttexthash="150943">qooxdoo 2.0.3</option>
+          <option value="126" _msthash="646736" _msttexthash="129051">qooxdoo 2.1</option>
+        </optgroup><optgroup label="svg.js" _mstlabel="73866">
+          <option value="395" _msthash="646572" _msttexthash="122499">svg.js 2.6.5</option>
+          <option value="393" _msthash="646737" _msttexthash="121810">svg.js 2.7.1</option>
+          <option value="391" _msthash="646909" _msttexthash="121498">svg.js 3.0.5</option>
+    </optgroup></select>
+    <label>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </label>
+  </div>
+
+  <ul id="js_dependency">
+    
+  </ul>
+</div>
+
+<h3 _msthash="344864" _msttexthash="305669">Atributo &lt;script&gt;</h3>
+<p class="libraryTagAttributes">
+  <label>
+    <input id="id_js_lib_option" type="text" name="js_lib_option" maxlength="255" placeholder="Kel data-type=&quot;&quot;" value="" _mstplaceholder="228878">
+  </label>
+</p>
+
+</div> <!-- /windowSettings -->
+
+<div class="windowSettings css hidden" data-panel="css" data-popover-ref="css">
+  <h3 _msthash="344630" _msttexthash="74477">Idioma</h3>
+<div class="selectCont">
+  <select name="panel_css" class="panelChoice" id="panel_css_choice" data-panel_id="id_code_css" data-panel="css">
+      <option data-mime-type="text/css" value="0" selected="" _msthash="625209" _msttexthash="24440">Css</option>
+      <option data-mime-type="text/x-scss" value="1" _msthash="625391" _msttexthash="35022">SCSS</option>
+      <option data-mime-type="text/x-sass" value="2" _msthash="625573" _msttexthash="34814">SASS</option>
+      <option data-mime-type="text/css" value="4" _msthash="625755" _msttexthash="237939">PostCSS (Estágio 0+)</option>
+      <option data-mime-type="text/css" value="5" _msthash="625937" _msttexthash="238719">PostCSS (Estágio 3+)</option>
+  </select>
+  <label>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+  </label>
+</div> <!-- /selectCont -->
+
+<h3 _msthash="345020" _msttexthash="110097">Opções</h3>
+<p id="normalize_check">
+  <label class="checkboxCont">
+    <input type="checkbox" name="normalize_css" id="id_normalize_css" value="1">
+    <span class="checkbox"><i class="bts bt-check"></i></span><font _mstmutation="1" _msthash="542373" _msttexthash="254592"> CSS normalizado </font></label>
+</p>
+
+</div> <!-- /windowSettings -->
+
+<div id="problem-banner"></div>
+
+          </div> <!-- #content -->
+
+          
+          <ul id="flash-messages" class="draft hidden">
+  <li class="warning">
+    <!--?xml version="1.0" encoding="UTF-8"?--><svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke-linecap="round" stroke-width="2" fill="none" stroke-linejoin="round"><polyline points="23,4 23,10 17,10"></polyline><path d="M20.49 15l8.16053e-09-2.30983e-08c-1.65578 4.68667-6.79735 7.1437-11.484 5.48792 -4.68667-1.65578-7.1437-6.79735-5.48792-11.484 1.65578-4.68667 6.79735-7.1437 11.484-5.48792 1.26714.447675 2.41794 1.17344 3.36792 2.12402l4.63 4.36"></path></g></svg><font _mstmutation="1" _msthash="390962" _msttexthash="1045122"> Este violino já não salvou mudanças. </font><span class="flashActions">
+      <font _mstmutation="1" _msthash="635453" _msttexthash="710307"><a id="apply-draft" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" _mstmutation="1" _istranslated="1">Aplicar alterações</a> <a id="discard-draft" href="https://jsfiddle.net/gleidsonfagno/yLbgs4r0/18/#" _mstmutation="1" _istranslated="1">Descarte</a></font>
+    </span>
+  </li>
+</ul>
+
+        </main> <!-- #layout-container -->
+
+      <div id="loader">
+        <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 33">
+          <g stroke-width="1" fill="none" fill-rule="evenodd">
+            <path class="cloud" d="M45,22.7331459 C45,19.1499462 42.7950446,16.079593 39.6628004,14.7835315 C39.6774469,14.5246474 39.7003932,14.2674038 39.7003932,14.0035978 C39.7003932,6.82243304 33.8412885,1 26.611593,1 C21.3985635,1 16.9102123,4.03409627 14.8051788,8.41527616 C13.7828502,7.62878013 12.503719,7.15547161 11.1134367,7.15547161 C7.77825654,7.15547161 5.07450503,9.84159999 5.07450503,13.1544315 C5.07450503,13.7760488 5.16938207,14.3779791 5.3477444,14.9418479 C2.74863428,16.4787471 1,19.2867709 1,22.5105187 C1,27.3287502 4.89630545,31.2367856 9.72803666,31.31094 L36.3341301,31.3109406 C41.1201312,31.3406346 45,27.4870665 45,22.7331459 L45,22.7331459 Z" stroke-linejoin="round"></path>
+
+            <path class="loop" d="M25.3570852,17.8208603
+            C26.0154526,17.1207706 27.1652748,15.6666667 29.5167986,15.6666667
+            C32.1278053,15.6666667 34.2444444,17.6366138 34.2444444,20.0666667
+            C34.2444444,22.4967196 32.1278053,24.4666667 29.5167986,24.4666667
+            C26.9249697,24.4666667 24.5595344,21.7145959 23.4888889,20.543316
+            C21.4404656,18.4187374 19.0750303,15.6666667 16.4832014,15.6666667
+            C13.8721947,15.6666667 11.7555556,17.6366138 11.7555556,20.0666667
+            C11.7555556,22.4967196 13.8721947,24.4666667 16.4832014,24.4666667
+            C18.8347252,24.4666667 19.9845474,23.0125628 20.6429148,22.312473
+            L25.3570852,17.8208603" stroke-linecap="round"></path>
+          </g>
+        </svg>
+        <span class="shadow"></span>
+      </div>
+
+      <div id="no-support" _msthash="161460" _msttexthash="41968589" _msthidden="1">IE is no longer supported 📠</div>
+    </form><script src="./gleidson-fagno-ex-js-md-12_files/choices.js.baixados" defer=""></script>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", function(){
+        var loadEditor = function(){
+          Layout.skin = "light"
+
+          $extend(Layout, new Events())
+
+          Actions = new EditorActions({
+            example_id: EditorConfig.fiddle.id
+          })
+
+
+          Layout.render()
+
+        }
+
+        var themeHref = "/css/dist-editor-dark.css?9c307ec363c36b1d0dfbf2ee64220cc5ab9c45f2"
+        var script = document.createElement("script")
+        script.src = "/js/_dist-editor.js?9c307ec363c36b1d0dfbf2ee64220cc5ab9c45f2"
+
+        var styleEditor    = document.createElement("link")
+        styleEditor.rel    = "stylesheet"
+        styleEditor.type   = "text/css"
+        styleEditor.id     = "editor-theme"
+        styleEditor.href   = themeHref
+        document.body.appendChild(styleEditor)
+
+        // Check if browser is supported
+        if (window.navigator.userAgent.indexOf("Trident/") > 0){
+            alert("IE is not supported.\n\nExisting fiddles will be automatically opened in read-only mode.")
+            document.body.classList.add("noSupport")
+        } else {
+          script.onload = loadEditor
+          styleEditor.onload = function(){
+            document.body.appendChild(script)
+          }
+        }
+      })
+    </script>
+
+    
+
+      <!-- <script src="//cdn.usefathom.com/script.js" site="UFKSJF" honor-dnt="true" auto="false"></script>
+  <script>
+    if (window.fathom){
+      window.fathom.trackPageview({
+        url: "/"
+      })
+    }
+  </script> -->
+
+  
+
+<div id="app-updates-highlighter"></div><link rel="stylesheet" type="text/css" id="editor-theme" href="./gleidson-fagno-ex-js-md-12_files/dist-editor-dark.css"><script src="./gleidson-fagno-ex-js-md-12_files/_dist-editor.js.baixados"></script><div class="autocomplete-suggestions "></div></body></html>

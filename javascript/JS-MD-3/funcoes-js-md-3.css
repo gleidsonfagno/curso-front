@@ -1,0 +1,43 @@
+body{
+    background: #ccc;
+}
+.container{
+    width: 50%;
+    margin: auto;
+    background: #fff;
+    text-align: center;
+}
+
+form{
+    display: block;
+    background: #fff;
+    margin: 10px auto;
+    padding: 10px;
+    width: 60%;
+}
+input, button{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem 2rem;
+}
+button{
+    border: 0 none;
+    border-radius: 20px;
+    background: #2121be;
+    width: 6rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+ }
+
+ input{
+    width: 50%;
+    padding: 1rem 2rem;
+ }
+
+ .mensagem
+ #resultados{
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+
+ }

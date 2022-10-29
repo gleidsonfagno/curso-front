@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Layouts</title>
+        <meta sharset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                font-family: Arial, Helvetica, sans-serif
+            }
+            header{
+                background-color:#666;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color:white;
+            }
+            nav{
+                float: left;
+                width: 30%;
+
+                background-color: #ccc;
+                padding:20px;
+            }
+            nav ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            article{
+                float: left;
+                padding: 20px;
+                width: 70%;
+                background-color:#f1f1f1;
+            }
+            section::after {
+			  background: #ccc;
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+            footer {
+                background:#777;
+                padding: 20px;
+                text-align:center;
+                color: white;
+            }
+            @media (max-width: 600px) {
+			  nav, article {
+			    width: 100%;
+			    height: auto;
+			  }
+			}
+        </style>
+    </head>
+    <body>
+        <header>
+
+            <h1>Curso Front-end-HTML</h1>
+
+        </header>
+
+        <section>
+
+            <nav>
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+
+            </nav>
+
+            <article>
+
+                <h2>titulo Artigo</h2>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed omnis magni inventore veniam consequuntur animi magnam ab obcaecati architecto. Quia quisquam pariatur earum quos quis at harum unde facilis error.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed omnis magni inventore veniam consequuntur animi magnam ab obcaecati architecto. Quia quisquam pariatur earum quos quis at harum unde facilis error.
+                </p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed omnis magni inventore veniam consequuntur animi magnam ab obcaecati architecto. Quia quisquam pariatur earum quos quis at harum unde facilis error.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed omnis magni inventore veniam consequuntur animi magnam ab obcaecati architecto. Quia quisquam pariatur earum quos quis at harum unde facilis error.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed omnis magni inventore veniam consequuntur animi magnam ab obcaecati architecto. Quia quisquam pariatur earum quos quis at harum unde facilis
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id nibh posuere, eleifend lacus quis, blandit mauris. Proin eu gravida justo. Donec a mi laoreet, malesuada est a, imperdiet leo. Fusce in mauris dapibus, cursus purus vitae, pulvinar ligula. Donec nec mi mollis, viverra purus et, faucibus ante. Fusce faucibus pretium eros, vitae condimentum orci dapibus eu. Morbi elit nibh, pulvinar ut laoreet sit amet, dignissim id lectus. Nunc ac felis posuere, interdum eros vitae, sodales eros. Aenean porta vehicula diam, sit amet venenatis ante eleifend in. Integer malesuada urna nunc, dapibus dapibus felis malesuada et. Ut id tempor dolor, ac imperdiet lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus quam, mollis in tellus quis, blandit venenatis nunc
+                </p>
+            </article>
+
+        </section>
+
+        <footer>Desenvolvido por gleidson</footer>
+    </body>
+</html>
