@@ -1,44 +1,58 @@
 const gulp = require("gulp");
+const { series } = require("gulp");
+
 const concat = require("gulp-concat");
 const cssmin = require("gulp-cssmin");
 const rename = require("gulp-rename");
 const uglify = require("gulp-uglify");
 const image = require("gulp-imagemin");
+const htmlmin = require("gulp-htmlmin");
+const babel = require("gulp-babel");
+const browserSync = require('browser-sync').create()
+const reload = browserSync.reload
 
-function tarefaCSS(cb) {
-  return gulp
+function tarefasCSS(cb) {
+  gulp
     .src([
       "./node_modules/bootstrap/dist/css/bootstrap.css",
       "./node_modules/@fortawesome/fontawesome-free/css/fontawesome.css",
       "./vendor/owl/css/owl.css",
       "./vendor/jquery-ui/jquery-ui.css",
-
       "./src/css/style.css",
-    ]) //copia os arquivo desta pagina
+    ])
+    //copia os arquivo desta pagina
     .pipe(concat("styles.css"))
     .pipe(cssmin())
     .pipe(rename({ suffix: ".min" })) //libs.min.css
     .pipe(gulp.dest("./dist/css")); //coloca aqui
+  cb();
 }
 
-function tarefasJS() {
-  return gulp
+function tarefasJS(callback) {
+  gulp
     .src([
-    //   "./node_modules/jquery/dist/jquery.js",
-    //   "./node_modules/bootstrap/dist/js/bootstrap.js",
+      "./node_modules/jquery/dist/jquery.js",
+      "./node_modules/bootstrap/dist/js/bootstrap.js",
       "./vendor/owl/js/owl.js",
-    //   "./vendor/jquery-mask/jquery.mask.min.js",
-    //   "./vendor/jquery-ui/jquery-ui.js",
-      "./vendor/jequery/jquery-3.6.1.js",
+      "./vendor/jquery-mask/jquery.mask.min.js",
+      // "./vendor/jquery-ui/jquery-ui.js",
+      // "./vendor/jequery/jquery-3.6.1.js",
       "./src/js/custom.js",
     ])
-    .pipe(concat("funciona.js"))
+    .pipe(
+      babel({
+        comments: false,
+        presets: ["@babel/env"],
+      })
+    )
+    .pipe(concat("script.js"))
     .pipe(uglify())
     .pipe(rename({ suffix: ".min" })) //libs.min.js
     .pipe(gulp.dest("./dist/js"));
+  callback();
 }
 
-function tarefasImagem() {
+function tarefasImagem(callback) {
   return gulp
     .src("./src/images/*")
     .pipe(
@@ -57,6 +71,36 @@ function tarefasImagem() {
     .pipe(gulp.dest("./dist/images"));
 }
 
-exports.styles = tarefaCSS;
+gulp.task("server", function(){
+  browserSync.init({
+    server: {
+      baseDir: "./dist"
+    }
+  })
+  gulp.watch('./src/**/*').on('change', process) // repete o processo quando alterar algo em src
+  gulp.watch('./dist/**/*').on('change', reload)
+
+})
+
+// POP
+function tarefasHTML(callback) {
+  gulp
+    .src("./src/**/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("./dist"));
+
+  return callback();
+}
+
+function end(cb){
+  console.log("tarefas concluídas")
+  return cb()
+}
+
+const process = series( tarefasHTML, tarefasJS, tarefasCSS, end)
+
+exports.styles = tarefasCSS;
 exports.scripts = tarefasJS;
 exports.images = tarefasImagem;
+
+exports.default = process
