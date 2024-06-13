@@ -8,8 +8,12 @@ const uglify = require("gulp-uglify");
 const image = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
 const babel = require("gulp-babel");
-const browserSync = require('browser-sync').create()
-const reload = browserSync.reload
+const browserSync = require("browser-sync").create();
+const sass = require("gulp-sass")(require("sass"));
+const stripCss = require("gulp-strip-css-comments"); 
+// const { pipe } = require("stdout-stream");
+// const { contains } = require("jquery");
+const reload = browserSync.reload;
 
 function tarefasCSS(cb) {
   gulp
@@ -18,13 +22,22 @@ function tarefasCSS(cb) {
       "./node_modules/@fortawesome/fontawesome-free/css/fontawesome.css",
       "./vendor/owl/css/owl.css",
       "./vendor/jquery-ui/jquery-ui.css",
-      "./src/css/style.css",
+      // "./src/css/style.css",
     ])
-    //copia os arquivo desta pagina
-    .pipe(concat("styles.css"))
-    .pipe(cssmin())
-    .pipe(rename({ suffix: ".min" })) //libs.min.css
-    .pipe(gulp.dest("./dist/css")); //coloca aqui
+    .pipe(stripCss()) // remove comentários do css
+    .pipe(concat("styles.css")) // mescla arquivos
+    .pipe(cssmin()) // minifica css
+    .pipe(rename({ suffix: ".min" })) // libs.min.css
+    .pipe(gulp.dest("./dist/css")); // cria arquivo em novo diretório
+  cb();
+}
+
+function tarefasSASS(cb) {
+  gulp
+    .src("./src/scss/**/*.scss")
+    .pipe(sass()) // transforma o sass para css
+    .pipe(gulp.dest("./dist/css"));
+
   cb();
 }
 
@@ -71,16 +84,15 @@ function tarefasImagem(callback) {
     .pipe(gulp.dest("./dist/images"));
 }
 
-gulp.task("server", function(){
+gulp.task("server", function () {
   browserSync.init({
     server: {
-      baseDir: "./dist"
-    }
-  })
-  gulp.watch('./src/**/*').on('change', process) // repete o processo quando alterar algo em src
-  gulp.watch('./dist/**/*').on('change', reload)
-
-})
+      baseDir: "./dist",
+    },
+  });
+  gulp.watch("./src/**/*").on("change", process); // repete o processo quando alterar algo em src
+  gulp.watch("./dist/**/*").on("change", reload);
+});
 
 // POP
 function tarefasHTML(callback) {
@@ -92,15 +104,16 @@ function tarefasHTML(callback) {
   return callback();
 }
 
-function end(cb){
-  console.log("tarefas concluídas")
-  return cb()
+function end(cb) {
+  console.log("tarefas concluídas");
+  return cb();
 }
 
-const process = series( tarefasHTML, tarefasJS, tarefasCSS, end)
+const process = series(tarefasHTML, tarefasJS, tarefasCSS, tarefasSASS, end);
 
 exports.styles = tarefasCSS;
 exports.scripts = tarefasJS;
 exports.images = tarefasImagem;
+exports.sass = tarefasSASS;
 
-exports.default = process
+exports.default = process;
